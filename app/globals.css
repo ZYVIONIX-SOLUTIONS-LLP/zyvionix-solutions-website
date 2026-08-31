@@ -765,3 +765,26 @@ svg:hover {
   -webkit-text-fill-color: initial;
   background-clip: unset;
 }
+
+/* Mobile Responsiveness & Viewport Overflows */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video,
+iframe,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .skeu-panel {
+    border-radius: 1.5rem !important;
+  }
+}
