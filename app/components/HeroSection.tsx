@@ -117,7 +117,8 @@ export default function HeroSection() {
         <div ref={dotRef} style={{position:"fixed",left:-200,top:-200,width:6,height:6,borderRadius:"50%",background:cursorActive?"#e879f9":"#a78bfa",pointerEvents:"none",zIndex:99999,transform:"translate(-50%,-50%)",boxShadow:"0 0 10px rgba(167,139,250,0.9)",transition:"background 0.2s ease"}}/>
       </>)}
 
-      <section className="hz" aria-label="Zyvionix Hero" style={{position:"relative",width:"100vw",minHeight:isMobile?"100vh":"100svh",height:isMobile?"auto":"100svh",overflow:"hidden",marginLeft:"calc(50% - 50vw)",marginRight:"calc(50% - 50vw)",background:"#0d0814",display:"flex",flexDirection:"column",alignItems:"center",justify:"center",paddingTop:isMobile?"80px":"0",paddingBottom:isMobile?"20px":"0"}}>
+      <section className="hz" aria-label="Zyvionix Hero" style={{position:"relative",width:"100vw",minHeight:isMobile?"100vh":"100svh",height:isMobile?"auto":"100svh",overflow:"hidden",marginLeft:"calc(50% - 50vw)",marginRight:"calc(50% - 50vw)",background:"#0d0814",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",paddingTop:isMobile?"80px":"0",paddingBottom:isMobile?"20px":"0"}}>
+
         <canvas ref={canvasRef} aria-hidden="true" style={{position:"absolute",inset:0,width:"100%",height:"100%",zIndex:1}}/>
         <div ref={spotlightRef} aria-hidden="true" style={{position:"absolute",inset:0,zIndex:2,pointerEvents:"none"}}/>
         <div aria-hidden="true" style={{position:"absolute",inset:0,zIndex:1,backgroundImage:"linear-gradient(rgba(139,92,246,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,0.04) 1px,transparent 1px)",backgroundSize:"50px 50px",animation:"hzG 10s linear infinite alternate",pointerEvents:"none"}}/>
@@ -148,7 +149,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div style={{position:isMobile?"relative":"absolute",bottom:0,left:0,right:0,zIndex:10,display:"flex",justify:"center",gap:"clamp(0.4rem,2vw,1.5rem)",flexWrap:"wrap",padding:"clamp(0.8rem,2vw,1.4rem) clamp(0.75rem,3vw,3rem)",borderTop:"1px solid rgba(139,92,246,0.12)",background:"linear-gradient(0deg,rgba(13,8,20,0.96) 0%,transparent 100%)",width:"100%"}}>
+        <div style={{position:isMobile?"relative":"absolute",bottom:0,left:0,right:0,zIndex:10,display:"flex",justifyContent:"center",gap:"clamp(0.4rem,2vw,1.5rem)",flexWrap:"wrap",padding:"clamp(0.8rem,2vw,1.4rem) clamp(0.75rem,3vw,3rem)",borderTop:"1px solid rgba(139,92,246,0.12)",background:"linear-gradient(0deg,rgba(13,8,20,0.96) 0%,transparent 100%)",width:"100%"}}>
+
           {STATS.map((s,i)=>(<div key={s.label} className="hzst" style={{display:"flex",flexDirection:"column",alignItems:"center",gap:"0.2rem",padding:isMobile?"0.5rem 0.9rem":"0.7rem 1.5rem",borderRadius:14,border:"1px solid rgba(139,92,246,0.2)",background:"rgba(124,58,237,0.07)",backdropFilter:"blur(12px)",transition:"transform 0.25s ease,border-color 0.25s ease,background 0.25s ease",animation:"hzFU 0.6s ease both",animationDelay:(0.1+i*0.08)+"s",flex:isMobile?"1 1 40%":"0 1 auto",minWidth:isMobile?70:88}}>
             <span style={{fontSize:"clamp(1rem,2.5vw,1.6rem)",fontWeight:900,background:"linear-gradient(135deg,#a78bfa,#c026d3)",WebkitBackgroundClip:"text",backgroundClip:"text",WebkitTextFillColor:"transparent",lineHeight:1}}>{s.value}</span>
             <span style={{fontSize:isMobile?"0.55rem":"0.63rem",fontWeight:700,letterSpacing:"0.12em",textTransform:"uppercase",color:"rgba(255,255,255,0.45)"}}>{s.label}</span>
