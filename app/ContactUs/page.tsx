@@ -101,7 +101,7 @@ export default function ContactUsPage() {
               <p className="text-sm leading-relaxed text-[#64748b] dark:text-gray-300 font-normal mb-6 flex-grow">
                 Quick questions? Chat with us on WhatsApp for instant responses
               </p>
-              <Link href="https://wa.me/+919188426776" className="text-[#7c3aed] dark:text-purple-400 font-extrabold text-sm inline-flex items-center gap-1 hover:underline transition-colors">
+              <Link href="https://wa.me/+916238392582" className="text-[#7c3aed] dark:text-purple-400 font-extrabold text-sm inline-flex items-center gap-1 hover:underline transition-colors">
                 Start Chat
               </Link>
             </div>
@@ -115,9 +115,10 @@ export default function ContactUsPage() {
               <p className="text-sm leading-relaxed text-[#64748b] dark:text-gray-300 font-normal mb-6 flex-grow">
                 Speak directly with our team during business hours
               </p>
-              <Link href="#" className="text-[#7c3aed] dark:text-purple-400 font-extrabold text-sm inline-flex items-center gap-1 hover:underline transition-colors">
-                +91 (Available 9 AM - 6 PM IST)
+              <Link href="tel:+916238392582" className="text-[#7c3aed] dark:text-purple-400 font-extrabold text-sm inline-flex items-center gap-1 hover:underline transition-colors">
+                +91 62383 92582 (Available 9 AM - 6 PM IST)
               </Link>
+
             </div>
 
             {/* Schedule Card */}

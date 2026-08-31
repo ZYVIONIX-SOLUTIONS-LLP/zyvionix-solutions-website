@@ -14,7 +14,8 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/+919188426776" // Replace with actual number
+      href="https://wa.me/+916238392582"
+
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-24 right-6.5 z-50 flex items-center justify-center p-1.5 rounded-full bg-[#25D366] text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] backdrop-blur-md hover:scale-110 hover:shadow-[0_0_30px_rgba(37,211,102,0.7)] transition-all duration-300 group"

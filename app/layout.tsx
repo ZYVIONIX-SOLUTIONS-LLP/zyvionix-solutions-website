@@ -94,7 +94,8 @@ const jsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-9188426776",
+    telephone: "+91-6238392582",
+
     contactType: "customer service",
     email: "info@zyvionix.com akshithjeevan2000@gmail.com",
   },
