@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Date: Sun, 12 Apr 2026 10:48:40 GMT
+Content-Type: video/mp4
+Content-Length: 21074997
+Connection: keep-alive
+Server: cloudflare
+x-amz-replication-status: COMPLETED
+last-modified: Tue, 26 Mar 2024 16:59:38 GMT
+etag: "b07453b238fd48f2842c35b31b08bf62-5"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: Gr66u011Lz_Tx0qQdwPYQVPrczAt_5OT
+x-cache: Miss from cloudfront
+via: 1.1 7bb80b5d9f75710222feac15033d6af0.cloudfront.net (CloudFront)
+x-amz-cf-pop: PRG50-C1
+x-amz-cf-id: 7Zbwqwmq1ROFsl4VbMgz8LT2gRGySWmaTcJkYmFEbSn_R_ty8kY_Iw==
+cache-control: public, max-age=31536000
+vary: Origin
+set-cookie: __cf_bm=UwBe48ZDH3SEIgyhWR9u6cw1eDW0kxE2QkDF5pMSjSM-1775990920.2350106-1.0.1.1-mnEAjVwVXD1xpYtJqU9MrZEW.dP7gc7KW_UIE2pPgmkREanF3Mu29WUKNPBm0ssvTAVuyi3yr2MV1w4883vChAa2cVsQzJ6SHX9DJHBC6X1wl61I1BS9CyRtgpzFYNVH; HttpOnly; Secure; Path=/; Domain=pexels.com; Expires=Sun, 12 Apr 2026 11:18:40 GMT
+set-cookie: _cfuvid=5pZlHthbo9l5gT71.oP1V4MG.f1la1tnHIMJOILu7cY-1775990920.2350106-1.0.1.1-L0ZcgGPRqKtwcu2LfsNV_bceAlB9O1SbmaXpmBNThE0; HttpOnly; SameSite=None; Secure; Path=/; Domain=pexels.com
+CF-Cache-Status: HIT
+Expires: Mon, 12 Apr 2027 10:48:40 GMT
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Content-Disposition: attachment
+CF-RAY: 9eb1a8f37c847887-CNN
+alt-svc: h3=":443"; ma=86400
+

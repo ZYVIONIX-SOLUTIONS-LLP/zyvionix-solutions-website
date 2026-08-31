@@ -1,0 +1,767 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Skeuomorphic Brushed Titanium & Amethyst Gem — Light */
+  --background: #e9e4f0;
+  --foreground: #241a35;
+  --card: #f2eef9;
+  --card-foreground: #241a35;
+  --popover: #f6f2fb;
+  --popover-foreground: #241a35;
+  --primary: #7c3aed;
+  --primary-foreground: #fff7ff;
+  --secondary: #e4ddef;
+  --secondary-foreground: #4c1d95;
+  --muted: #e6e0ef;
+  --muted-foreground: #675d78;
+  --accent: #ece5f7;
+  --accent-foreground: #4c1d95;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(76, 44, 122, 0.28);
+  --input: rgba(76, 44, 122, 0.16);
+  --ring: #8b5cf6;
+  --section-soft: #ece6f4;
+  --header-background: #ece6f4;
+  --header-foreground: #241a35;
+  --border-soft: rgba(76, 44, 122, 0.14);
+
+  /* Material light-source recipe: highlight (raised edge), shade (depth), sheen (gloss sweep) */
+  --metal-highlight: rgba(255, 255, 255, 0.85);
+  --metal-shade: rgba(46, 26, 71, 0.35);
+  --gem-highlight: rgba(255, 255, 255, 0.55);
+  --gem-shade: rgba(45, 12, 92, 0.55);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-section-soft: var(--section-soft);
+  --color-header-background: var(--header-background);
+  --color-header-foreground: var(--header-foreground);
+  --color-border-soft: var(--border-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+.dark {
+  /* Sleuomorphic Obsidian & Pure Black — Dark */
+  --background: #000000;
+  --foreground: #f8fafc;
+  --card: #000000;
+  --card-foreground: #f8fafc;
+  --popover: #000000;
+  --popover-foreground: #f8fafc;
+  --primary: #a78bfa;
+  --primary-foreground: #000000;
+  --secondary: #111116;
+  --secondary-foreground: #c4b5fd;
+  --muted: #0d0d12;
+  --muted-foreground: #94a3b8;
+  --accent: #121218;
+  --accent-foreground: #f1f5f9;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
+  --border: rgba(167, 139, 250, 0.22);
+  --input: rgba(167, 139, 250, 0.16);
+  --ring: #7c3aed;
+  --section-soft: #040406;
+  --header-background: #0a0a0d;
+  --header-foreground: #f8fafc;
+  --border-soft: rgba(167, 139, 250, 0.12);
+
+  --metal-highlight: rgba(255, 255, 255, 0.12);
+  --metal-shade: rgba(0, 0, 0, 0.95);
+  --gem-highlight: rgba(221, 214, 254, 0.35);
+  --gem-shade: rgba(0, 0, 0, 0.85);
+}
+
+html,
+body {
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--background);
+  /* Skeuomorphic light mode: brushed titanium sheet — directional sheen + fine grain + soft panel vignette */
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.55) 0%, transparent 22%, transparent 78%, rgba(76, 44, 122, 0.06) 100%),
+    radial-gradient(ellipse 140% 90% at 50% -10%, rgba(255, 255, 255, 0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 120% 80% at 50% 110%, rgba(76, 44, 122, 0.08) 0%, transparent 60%),
+    repeating-linear-gradient(100deg, rgba(76, 44, 122, 0.035) 0px, rgba(76, 44, 122, 0.035) 1px, transparent 1px, transparent 3px),
+    radial-gradient(circle at 1px 1px, rgba(76, 44, 122, 0.07) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 6px 6px, 32px 32px;
+  background-attachment: fixed;
+}
+
+/* Dark mode: pure obsidian black background */
+.dark body {
+  background-color: #000000;
+  background-image:
+    linear-gradient(115deg, rgba(196, 181, 253, 0.04) 0%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.8) 100%),
+    radial-gradient(ellipse 70% 55% at 15% 0%, rgba(109, 40, 217, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(124, 58, 237, 0.08) 0%, transparent 55%),
+    repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 3px),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.025) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 6px 6px, 32px 32px;
+  background-attachment: fixed;
+}
+
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
+
+.animate-star-movement-bottom {
+  animation: star-movement-bottom 6s linear infinite alternate;
+}
+
+.animate-star-movement-top {
+  animation: star-movement-top 6s linear infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-40px) rotate(8deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Hide Spline Watermarks */
+#logo,
+.spline-watermark,
+[class^="splineLogo"],
+a[href*="spline.design"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* ── Light Mode Skeuomorphic Utilities ── */
+/* Embossed panel: raised material with a lit top bevel and a shaded underside, like stamped metal or pressed leather */
+:root .glass-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, #faf8fd 0%, #ece5f6 100%);
+  border: 1px solid rgba(76, 44, 122, 0.18);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 -6px 14px rgba(76, 44, 122, 0.08) inset,
+    0 14px 30px -10px rgba(76, 44, 122, 0.28),
+    0 2px 4px rgba(76, 44, 122, 0.10);
+}
+
+/* Beveled metal bezel ring (replaces the old neon glow ring) */
+:root .glow-border {
+  position: relative;
+}
+
+:root .glow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.95), rgba(76, 44, 122, 0.35) 45%, rgba(255, 255, 255, 0.5) 60%, rgba(76, 44, 122, 0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.pause-on-hover:hover,
+.group:hover .pause-on-hover {
+  animation-play-state: paused !important;
+}
+
+/* ── Hero Entrance Animations ── */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-blur-in {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-line-grow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 6rem;
+    opacity: 1;
+  }
+}
+
+/* Utility classes — pair with style="--delay:Xs" for custom timing */
+.animate-hero-badge {
+  animation: hero-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.05s);
+}
+
+.animate-hero-title {
+  animation: hero-fade-up 0.70s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.18s);
+}
+
+.animate-hero-sub {
+  animation: hero-blur-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.34s);
+}
+
+.animate-hero-body {
+  animation: hero-blur-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.46s);
+}
+
+.animate-hero-cta {
+  animation: hero-fade-up 0.60s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.58s);
+}
+
+.animate-hero-card {
+  animation: hero-slide-right 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.40s);
+}
+
+.animate-hero-slide-left {
+  animation: hero-slide-left 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.10s);
+}
+
+.animate-hero-divider {
+  animation: hero-line-grow 0.60s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0.42s);
+}
+
+/* ── Dark Mode Skeuomorphic Utilities ── */
+.dark .glass-card {
+  background:
+    linear-gradient(180deg, rgba(196, 181, 253, 0.10) 0%, rgba(196, 181, 253, 0) 40%),
+    linear-gradient(180deg, #241d38 0%, #17121f 100%);
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  box-shadow:
+    0 1px 0 rgba(196, 181, 253, 0.18) inset,
+    0 -8px 16px rgba(0, 0, 0, 0.5) inset,
+    0 16px 34px -10px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.dark .glow-border {
+  position: relative;
+}
+
+.dark .glow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(155deg,
+      rgba(221, 214, 254, 0.55),
+      rgba(109, 40, 217, 0.55) 45%,
+      rgba(0, 0, 0, 0.4) 60%,
+      rgba(167, 139, 250, 0.6));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Neon card hover glow */
+.dark .neon-hover:hover {
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.50),
+    0 8px 40px rgba(109, 40, 217, 0.32),
+    0 2px 8px rgba(139, 92, 246, 0.18);
+  transform: translateY(-2px);
+}
+
+@keyframes shimmer-pulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.dark .glow-pulse {
+  animation: shimmer-pulse 3s ease-in-out infinite;
+}
+
+
+/* ── Skeuomorphic tactile buttons: glossy gem pills that physically press in on click ── */
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 9999px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Outline style — brushed metal rim, engraved label, gem fill on hover, true "press" on click */
+.btn-outline {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(76, 44, 122, 0.05));
+  color: #5b21b6;
+  border: 2px solid #6d28d9;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 4px 10px rgba(76, 44, 122, 0.18);
+}
+
+.btn-outline:hover {
+  background: linear-gradient(180deg, #8b5cf6, #6d28d9);
+  color: #fff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 8px 20px rgba(109, 40, 217, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 2px 6px rgba(76, 44, 122, 0.25) inset,
+    0 1px 2px rgba(76, 44, 122, 0.2);
+}
+
+.dark .btn-outline {
+  background: linear-gradient(180deg, rgba(196, 181, 253, 0.10), rgba(0, 0, 0, 0.3));
+  color: #c4b5fd;
+  border-color: #a855f7;
+  box-shadow:
+    0 1px 0 rgba(196, 181, 253, 0.25) inset,
+    0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark .btn-outline:hover {
+  background: linear-gradient(180deg, #a855f7, #7c3aed);
+  color: #fff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 8px 22px rgba(168, 85, 247, 0.45);
+}
+
+.dark .btn-outline:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* Shimmer effect */
+.hover-shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
+  transform: skewX(-20deg);
+}
+
+.dark .hover-shimmer::before {
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+}
+
+/* Animate on hover */
+.hover-shimmer:hover::before {
+  animation: shimmer 0.75s ease forwards;
+}
+
+/* Keyframes */
+@keyframes shimmer {
+  100% {
+    left: 150%;
+  }
+}
+
+/* ── Universal 360° Icon Rotation Animation on Hover ── */
+svg {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+:hover > svg,
+:hover > * > svg,
+.group:hover svg,
+[class*="group"]:hover svg,
+a:hover svg,
+button:hover svg,
+article:hover svg,
+div:hover > svg,
+svg:hover {
+  transform: rotate(360deg) scale(1.15) !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Skeuomorphic material kit — brushed metal panels, gem buttons,
+   rivets and engraved seams. Shared across Header / Footer / toggle.
+   ══════════════════════════════════════════════════════════════ */
+
+/* Riveted brushed-metal panel (navbar / footer chrome) */
+.skeu-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 30%),
+    repeating-linear-gradient(95deg, rgba(76, 44, 122, 0.05) 0px, rgba(76, 44, 122, 0.05) 1px, transparent 1px, transparent 3px),
+    linear-gradient(180deg, #f6f2fb 0%, #e3dbef 100%);
+  border: 1px solid rgba(76, 44, 122, 0.22);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 -3px 8px rgba(76, 44, 122, 0.10) inset,
+    0 16px 36px -8px rgba(76, 44, 122, 0.30),
+    0 3px 6px rgba(76, 44, 122, 0.12);
+}
+
+.dark .skeu-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 30%),
+    repeating-linear-gradient(95deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px),
+    linear-gradient(180deg, #111115 0%, #050507 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 -3px 10px rgba(0, 0, 0, 0.8) inset,
+    0 18px 40px -8px rgba(0, 0, 0, 0.85),
+    0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Small flush rivet / screw-head detail */
+.skeu-rivet {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95), rgba(76, 44, 122, 0.35) 60%, rgba(76, 44, 122, 0.55) 100%);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.6), 0 -1px 1px rgba(76, 44, 122, 0.3) inset;
+}
+
+.dark .skeu-rivet {
+  background: radial-gradient(circle at 35% 30%, rgba(221, 214, 254, 0.9), rgba(109, 40, 217, 0.6) 60%, rgba(0, 0, 0, 0.6) 100%);
+  box-shadow: 0 1px 1px rgba(196, 181, 253, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* Raised pill — resting state of a nav link / icon button, lifts on hover, presses on click */
+.skeu-pill {
+  background: linear-gradient(180deg, #faf8fd 0%, #ece5f6 100%);
+  border: 1px solid rgba(76, 44, 122, 0.16);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 3px 6px rgba(76, 44, 122, 0.14);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.skeu-pill:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 6px 14px rgba(76, 44, 122, 0.22);
+}
+
+.skeu-pill:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(76, 44, 122, 0.25) inset;
+}
+
+.dark .skeu-pill {
+  background: linear-gradient(180deg, #2a2140 0%, #1a1428 100%);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  box-shadow:
+    0 1px 0 rgba(196, 181, 253, 0.15) inset,
+    0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark .skeu-pill:hover {
+  box-shadow:
+    0 1px 0 rgba(196, 181, 253, 0.2) inset,
+    0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.dark .skeu-pill:active {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) inset;
+}
+
+/* Engraved / pressed-in pill — active nav state, looks stamped into the panel */
+.skeu-pressed {
+  background: linear-gradient(180deg, #ded3f0 0%, #f1ebf9 100%);
+  border: 1px solid rgba(76, 44, 122, 0.28);
+  box-shadow:
+    0 2px 5px rgba(76, 44, 122, 0.35) inset,
+    0 -1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark .skeu-pressed {
+  background: linear-gradient(180deg, #150f22 0%, #2a2140 100%);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.7) inset,
+    0 -1px 0 rgba(196, 181, 253, 0.15) inset;
+}
+
+/* Glossy gem button — CTA treatment with a curved sheen sweep across the top */
+.skeu-gem {
+  position: relative;
+  background: linear-gradient(180deg, #9d5cf5 0%, #6d28d9 55%, #5b21b6 100%);
+  border: 1px solid rgba(91, 33, 182, 0.6);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 4px 12px rgba(109, 40, 217, 0.4),
+    0 1px 2px rgba(45, 12, 92, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skeu-gem::before {
+  content: '';
+  position: absolute;
+  inset: 1px 1px auto 1px;
+  height: 45%;
+  border-radius: 9999px 9999px 60% 60% / 9999px 9999px 100% 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.skeu-gem:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 8px 20px rgba(109, 40, 217, 0.5);
+}
+
+.skeu-gem:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 3px 8px rgba(45, 12, 92, 0.6) inset,
+    0 1px 2px rgba(45, 12, 92, 0.3);
+}
+
+.dark .skeu-gem {
+  background: linear-gradient(180deg, #b794f6 0%, #7c3aed 55%, #5b21b6 100%);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 4px 16px rgba(124, 58, 237, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Inset engraved track (mode toggle / switches) */
+.skeu-track {
+  background: linear-gradient(180deg, #e3dbef 0%, #f3eefa 60%);
+  box-shadow:
+    0 2px 5px rgba(76, 44, 122, 0.30) inset,
+    0 -1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark .skeu-track {
+  background: linear-gradient(180deg, #100b1a 0%, #221a35 60%);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.8) inset,
+    0 -1px 0 rgba(196, 181, 253, 0.12) inset;
+}
+
+/* Glossy gem knob (mode toggle thumb) */
+.skeu-knob {
+  position: relative;
+  background: radial-gradient(circle at 32% 28%, #ffffff 0%, #e9defc 35%, #b794f6 75%, #7c3aed 100%);
+  box-shadow:
+    0 2px 4px rgba(45, 12, 92, 0.35),
+    0 1px 1px rgba(255, 255, 255, 0.8) inset,
+    0 -2px 3px rgba(91, 33, 182, 0.35) inset;
+}
+
+.dark .skeu-knob {
+  background: radial-gradient(circle at 32% 28%, #f3ecff 0%, #c4b5fd 35%, #7c3aed 75%, #4c1d95 100%);
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.6),
+    0 1px 1px rgba(255, 255, 255, 0.5) inset,
+    0 -2px 4px rgba(45, 12, 92, 0.5) inset;
+}
+
+/* Stitched seam divider — leather-trim edge accent */
+.skeu-seam {
+  border-top: 1px dashed rgba(76, 44, 122, 0.25);
+  position: relative;
+}
+
+.skeu-seam::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dark .skeu-seam {
+  border-top: 1px dashed rgba(167, 139, 250, 0.25);
+}
+
+.dark .skeu-seam::before {
+  background: rgba(196, 181, 253, 0.12);
+}
+
+/* ── Skeuomorphic heading text: embossed / engraved letterforms ──
+   Light source top-left: a light highlight lifts the glyph, a soft
+   violet shade grounds it — reads as stamped or pressed material.
+   Works even on gradient/transparent-fill headings, since text-shadow
+   follows the glyph mask independent of fill color. */
+/* Crisp, clean heading typography without washed-out embossed text shadow */
+:where(h1, h2, h3, h4, h5, h6) {
+  text-shadow: none;
+}
+
+.dark :where(h1, h2, h3, h4, h5, h6) {
+  text-shadow: none;
+}
+
+.premium-text-gradient {
+  color: #0f172a;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: initial;
+  background-clip: unset;
+}
+
+.dark .premium-text-gradient {
+  color: #ffffff;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: initial;
+  background-clip: unset;
+}

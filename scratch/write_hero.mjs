@@ -1,0 +1,10 @@
+import fs from "fs";
+import path from "path";
+const out = path.join("d:/coding/Projects/zyvionix solutions", "app", "components", "HeroSection.tsx");
+const lines = [];
+lines.push(`"use client";`);
+lines.push(``);
+lines.push(`import React, { useEffect, useRef, useState, useCallback } from "react";`);
+lines.push(`import Link from "next/link";`);
+fs.writeFileSync(out, lines.join("\n"), "utf8");
+console.log("test ok");
