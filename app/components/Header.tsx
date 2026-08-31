@@ -44,15 +44,19 @@ export default function Header() {
           {/* LOGO */}
           <div className="shrink-0">
             <Link href="/" className="flex items-center gap-2 md:gap-2.5 group">
-              <Image
-                src="/images/header/Untitled - August 20, 2026 at 17.02.05.png"
-                alt="Zyvionix Logo"
-                width={1254}
-                height={1254}
-                className="h-7 sm:h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                priority
-              />
+              <div className="relative h-7 sm:h-8 md:h-9 w-7 sm:w-8 md:w-9 shrink-0 flex items-center justify-center">
+                <Image
+                  src="/images/header/Untitled - August 20, 2026 at 17.02.05.png"
+                  alt="Zyvionix Logo"
+                  width={36}
+                  height={36}
+                  style={{ height: "100%", width: "100%", objectFit: "contain" }}
+                  className="transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
+              </div>
               <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.16em] ml-0.5 md:ml-1">
+
                 <span className="text-[#0284c7] dark:text-[#38bdf8] group-hover:text-[#0369a1] dark:group-hover:text-[#60a5fa] transition-colors">
                   Zyvionix
                 </span>{" "}

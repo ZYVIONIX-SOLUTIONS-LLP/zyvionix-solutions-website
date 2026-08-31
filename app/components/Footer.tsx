@@ -12,14 +12,18 @@ export default function Footer() {
 
         <div>
           <Link href="/" className="flex items-center gap-3 mb-4 group">
-            <Image
-              src="/images/header/Untitled - August 20, 2026 at 17.02.05.png"
-              alt="Zyvionix Logo"
-              width={1254}
-              height={1254}
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+            <div className="relative h-10 md:h-12 w-10 md:w-12 shrink-0 flex items-center justify-center">
+              <Image
+                src="/images/header/Untitled - August 20, 2026 at 17.02.05.png"
+                alt="Zyvionix Logo"
+                width={48}
+                height={48}
+                style={{ height: "100%", width: "100%", objectFit: "contain" }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
             <h2 className="text-2xl font-bold tracking-tight text-foreground dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+
               Zyvionix Solutions
             </h2>
           </Link>
