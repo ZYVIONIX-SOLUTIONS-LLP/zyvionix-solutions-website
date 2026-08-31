@@ -174,7 +174,8 @@ export default function WhoWeArePage() {
               </div>
 
               <h1 className="animate-hero-title relative mt-8 max-w-4xl text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl pb-2 text-[#0f172a] dark:text-white drop-shadow-sm">
-                At Zyvionix, we believe innovation begins with the right foundation.
+                At Zyvionix Solutions, we believe innovation begins with the right foundation.
+
               </h1>
               <p className="animate-hero-body mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
                 Established with a vision to empower businesses of every scale,

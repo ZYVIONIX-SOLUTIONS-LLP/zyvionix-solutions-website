@@ -60,9 +60,10 @@ export default function Header() {
                 <span className="text-[#0284c7] dark:text-[#38bdf8] group-hover:text-[#0369a1] dark:group-hover:text-[#60a5fa] transition-colors">
                   Zyvionix
                 </span>{" "}
-                <span className="hidden xs:inline text-[#0f172a] dark:text-white group-hover:text-[#7c3aed] dark:group-hover:text-purple-300 transition-colors">
+                <span className="inline text-[#0f172a] dark:text-white group-hover:text-[#7c3aed] dark:group-hover:text-purple-300 transition-colors">
                   Solutions
                 </span>
+
               </span>
             </Link>
           </div>
