@@ -44,7 +44,7 @@ export default function Header() {
           {/* LOGO */}
           <div className="shrink-0">
             <Link href="/" className="flex items-center gap-2 md:gap-2.5 group">
-              <div className="relative h-7 sm:h-8 md:h-9 w-7 sm:w-8 md:w-9 shrink-0 flex items-center justify-center">
+              <div className="relative h-6 sm:h-8 md:h-9 w-6 sm:w-8 md:w-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/header/Untitled - August 20, 2026 at 17.02.05.png"
                   alt="Zyvionix Logo"
@@ -55,7 +55,7 @@ export default function Header() {
                   priority
                 />
               </div>
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.16em] ml-0.5 md:ml-1">
+              <span className="text-[10px] xs:text-[11px] sm:text-[13px] font-extrabold uppercase tracking-[0.1em] sm:tracking-[0.16em] ml-0.5 md:ml-1 whitespace-nowrap">
 
                 <span className="text-[#0284c7] dark:text-[#38bdf8] group-hover:text-[#0369a1] dark:group-hover:text-[#60a5fa] transition-colors">
                   Zyvionix
@@ -91,12 +91,12 @@ export default function Header() {
           </nav>
 
           {/* RIGHT CONTROLS */}
-          <div className="flex items-center gap-1.5 md:gap-2.5">
+          <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5">
             <Link
               href="/ContactUs"
-              className="skeu-gem inline-flex items-center gap-1.5 rounded-full px-3 md:px-4 py-1 md:py-1.5 text-[11px] md:text-xs font-extrabold text-white"
+              className="skeu-gem inline-flex items-center gap-1.5 rounded-full px-2.5 sm:px-3 md:px-4 py-1 md:py-1.5 text-[10px] sm:text-[11px] md:text-xs font-extrabold text-white"
             >
-              <Rocket size={13} className="relative z-10 drop-shadow-[0_1px_1px_rgba(45,12,92,0.5)]" />
+              <Rocket size={12} className="relative z-10 drop-shadow-[0_1px_1px_rgba(45,12,92,0.5)]" />
               <span className="relative z-10 hidden sm:inline">Contact Us</span>
             </Link>
             <ModeToggle />
@@ -105,10 +105,10 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden flex items-center justify-center h-8 w-8 rounded-full bg-primary/10 dark:bg-white/10 text-primary dark:text-purple-300 border border-primary/20 dark:border-white/10 transition-transform active:scale-95"
+              className="md:hidden flex items-center justify-center h-7 w-7 sm:h-8 sm:w-8 rounded-full bg-primary/10 dark:bg-white/10 text-primary dark:text-purple-300 border border-primary/20 dark:border-white/10 transition-transform active:scale-95 shrink-0"
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+              {mobileMenuOpen ? <X size={16} /> : <Menu size={16} />}
             </button>
           </div>
         </div>

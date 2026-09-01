@@ -222,7 +222,7 @@ export default function CarrierPage() {
 
               <div className="animate-hero-cta mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="mailto:info@Zyvionix.co.in?subject=Career%20Application"
+                  href="mailto:info@zyvionixsolutions.com?subject=Career%20Application"
                   className="inline-flex items-center gap-2.5 rounded-[1.25rem] bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600 px-7 py-3.5 text-sm font-extrabold text-white shadow-[0_6px_16px_rgba(124,58,237,0.35),inset_0_1.5px_2px_rgba(255,255,255,0.4),inset_0_-2.5px_5px_rgba(0,0,0,0.25)] border border-purple-400/40 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_24px_rgba(124,58,237,0.45)]"
                 >
                   <span>Apply Now</span>
@@ -370,10 +370,10 @@ export default function CarrierPage() {
 
                         <div className="pt-4 pb-2">
                           <Link
-                            href={`mailto:info@Zyvionix.com?subject=Application — ${encodeURIComponent(role.title)}`}
-                            className="btn btn-outline hover-shimmer gap-2 w-full sm:w-auto"
+                            href={`mailto:info@zyvionixsolutions.com?subject=Application — ${encodeURIComponent(role.title)}`}
+                            className="inline-flex items-center justify-center gap-2 rounded-xl bg-purple-600 dark:bg-purple-600 px-6 py-3 text-sm font-extrabold text-white transition-all duration-300 hover:bg-purple-500 dark:hover:bg-purple-500 hover:shadow-[0_0_24px_rgba(168,85,247,0.4)]"
                           >
-                            Apply for this role
+                            <span>Apply for this Role</span>
                             <ArrowRight className="h-4 w-4" />
                           </Link>
                         </div>
@@ -383,6 +383,24 @@ export default function CarrierPage() {
                 </article>
               );
             })}
+          </div>
+          
+          {/* General inquiry box */}
+          <div className="mt-12 rounded-[2.2rem] bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-transparent dark:from-violet-900/20 dark:via-purple-900/10 dark:to-transparent border border-purple-200/60 dark:border-purple-500/20 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-extrabold text-[#0f172a] dark:text-white mb-2">
+                Don't see a role that fits?
+              </h3>
+              <p className="text-sm text-purple-900/70 dark:text-gray-400 max-w-xl">
+                We're always looking for exceptional talent. Send us your resume and tell us how you can contribute to Zyvionix Solutions.
+              </p>
+            </div>
+            <Link
+              href="mailto:info@zyvionixsolutions.com?subject=General%20Career%20Inquiry"
+              className="inline-flex items-center gap-2.5 rounded-[1.25rem] bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600 px-7 py-3.5 text-sm font-extrabold text-white shadow-[0_6px_16px_rgba(124,58,237,0.35),inset_0_1.5px_2px_rgba(255,255,255,0.4),inset_0_-2.5px_5px_rgba(0,0,0,0.25)] border border-purple-400/40 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_24px_rgba(124,58,237,0.45)]"
+            >
+              <span>Email Your Profile</span>
+            </Link>
           </div>
         </div>
       </section>

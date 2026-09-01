@@ -89,15 +89,16 @@ const jsonLd = {
     "Zyvionix Solutions builds high-performance web apps, mobile apps, AI chatbots, and digital products from Kerala, India.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Room No. 60/44, 3rd Floor, JC Chambers, Panampilly Nagar",
+    addressLocality: "Ernakulam",
     addressRegion: "Kerala",
     addressCountry: "IN",
   },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+91-6238392582",
-
     contactType: "customer service",
-    email: "info@zyvionix.com akshithjeevan2000@gmail.com",
+    email: "info@zyvionixsolutions.com",
   },
   sameAs: [
     "https://www.instagram.com/akshith_jeevan/",

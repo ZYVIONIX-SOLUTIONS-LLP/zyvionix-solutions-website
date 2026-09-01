@@ -52,9 +52,11 @@ export default function PrivacyPolicy() {
 
                 <section>
                   <h2 className="text-2xl font-bold text-foreground dark:text-white mb-4">Data Collection & Cookies</h2>
-                  <p>
-                    Zyvionix uses cookies (small text files placed on your device) for proper functioning of our websites and to help collect data. 
-                    Please note that our websites may include links to websites of third parties whose privacy practices differ from those of Zyvionix; 
+                  <p className="mt-4">
+                    You are able to freely visit zyvionixsolutions.com and its affiliate websites on the World Wide Web without telling us who you are. 
+                  </p>
+                  <p className="mt-4">
+                    Please note that our websites may include links to websites of third parties whose privacy practices differ from those of Zyvionix Solutions LLP; 
                     if you provide personal data to any of those websites, your data is governed by their privacy statements.
                   </p>
                   <p className="mt-4">
@@ -81,7 +83,7 @@ export default function PrivacyPolicy() {
                   <h2 className="text-xl font-bold text-foreground dark:text-white mb-4">Managing Your Data</h2>
                   <p>
                     For information about managing your contact data, email subscriptions and promotional communications, please use the contact 
-                    form at Zyvionix.co.in or affiliate websites where you had originally provided your Personal data.
+                    form at zyvionixsolutions.com or affiliate websites where you had originally provided your Personal data.
                   </p>
                 </section>
               </div>

@@ -24,7 +24,7 @@ export default function TermsOfService() {
                 <section>
                   <h2 className="text-2xl font-bold text-foreground dark:text-white mb-4">1. Acceptance of Terms</h2>
                   <p>
-                    By accessing and using Zyvionix's website and services, you accept and agree to be bound by the terms and provision of this agreement. 
+                    By accessing and using Zyvionix Solutions LLP's website and services, you accept and agree to be bound by the terms and provision of this agreement. 
                     If you do not agree to abide by the above, please do not use this service.
                   </p>
                 </section>

@@ -27,9 +27,12 @@ export default function Footer() {
               Zyvionix Solutions
             </h2>
           </Link>
-          <p className="text-muted-foreground dark:text-gray-400 font-light leading-relaxed mb-6">
+          <p className="text-muted-foreground dark:text-gray-400 font-light leading-relaxed mb-2">
             Empowering businesses with innovative digital solutions and creative expression.
             We transform ideas into impactful digital experiences from Kerala to the world.
+          </p>
+          <p className="text-xs font-semibold tracking-wider text-purple-600 dark:text-purple-400 uppercase mb-6">
+            Registered LLP Company
           </p>
           <div className="flex gap-5">
             <a href="https://www.instagram.com/akshith_jeevan/" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
@@ -120,18 +123,17 @@ export default function Footer() {
         <div>
           <h3 className="skeu-seam inline-block pt-2 font-semibold mb-4 text-foreground dark:text-white">Contact Info</h3>
           <ul className="space-y-4 text-muted-foreground dark:text-gray-400 font-light">
-            <li className="flex items-center gap-3">
-              <MapPin size={18} className="text-purple-600 dark:text-purple-400 shrink-0" />
-              <span>Kerala, India</span>
+            <li className="flex items-start gap-3">
+              <MapPin size={18} className="text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
+              <span>Room No. 60/44, 3rd Floor, JC Chambers, Panampilly Nagar, Ernakulam, Kerala</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-purple-600 dark:text-purple-400 shrink-0" />
-              <a href="mailto:akshithjeevan2000@gmail.com" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Email Us</a>
+              <a href="mailto:info@zyvionixsolutions.com" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">info@zyvionixsolutions.com</a>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-purple-600 dark:text-purple-400 shrink-0" />
               <a href="tel:+916238392582" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">+91 62383 92582</a>
-
             </li>
             <li className="flex items-start gap-3">
               <Clock size={18} className="text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
@@ -147,7 +149,7 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="skeu-seam mt-16 pt-8 text-center text-muted-foreground/60 text-sm font-light">
-        <p>© 2026 Zyvionix Solutions. All rights reserved.</p>
+        <p>© 2026 Zyvionix Solutions LLP. All rights reserved.</p>
         <div className="flex justify-center gap-6 mt-4">
           <Link href="/privacy-policy" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Privacy Policy</Link>
           <Link href="/terms-of-service" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Terms of Service</Link>

@@ -87,8 +87,8 @@ export default function ContactUsPage() {
               <p className="text-sm leading-relaxed text-[#64748b] dark:text-gray-300 font-normal mb-6 flex-grow">
                 Send us a detailed message and we'll get back to you within 24 hours
               </p>
-              <Link href="mailto:akshithjeevan2000@gmail.com" className="text-[#7c3aed] dark:text-purple-400 font-extrabold text-sm inline-flex items-center gap-1 hover:underline transition-colors">
-                akshithjeevan2000@gmail.com
+              <Link href="mailto:info@zyvionixsolutions.com" className="text-[#7c3aed] dark:text-purple-400 font-extrabold text-sm inline-flex items-center gap-1 hover:underline transition-colors">
+                info@zyvionixsolutions.com
               </Link>
             </div>
 
@@ -169,7 +169,7 @@ export default function ContactUsPage() {
                   <MapPin className="h-5 w-5 relative z-10 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
                 </div>
                 <h4 className="text-lg font-extrabold text-[#0f172a] dark:text-white mb-1 group-hover:text-[#7c3aed] transition-colors">Our Location</h4>
-                <p className="text-sm text-[#64748b] dark:text-gray-300 font-normal">Kerala, India</p>
+                <p className="text-sm text-[#64748b] dark:text-gray-300 font-normal">Room No. 60/44, 3rd Floor, JC Chambers, Panampilly Nagar, Ernakulam, Kerala</p>
               </div>
 
               <div className="rounded-[2.2rem] bg-white dark:bg-[rgba(20,12,38,0.92)] border border-purple-100/80 dark:border-purple-500/20 shadow-[0_16px_40px_-8px_rgba(124,58,237,0.12),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.7),inset_0_1px_1px_rgba(255,255,255,0.1)] p-7 group hover:-translate-y-1 hover:shadow-[0_22px_48px_-8px_rgba(124,58,237,0.22)] transition-all duration-300 cursor-pointer">
@@ -185,7 +185,7 @@ export default function ContactUsPage() {
                   <Mail className="h-5 w-5 relative z-10 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
                 </div>
                 <h4 className="text-lg font-extrabold text-[#0f172a] dark:text-white mb-1 group-hover:text-[#7c3aed] transition-colors">Email Us</h4>
-                <p className="text-sm text-[#64748b] dark:text-gray-300 font-normal">info@Zyvionix.co.in</p>
+                <a href="mailto:info@zyvionixsolutions.com" className="text-sm text-[#64748b] dark:text-gray-300 font-normal hover:text-[#7c3aed] transition-colors">info@zyvionixsolutions.com</a>
               </div>
 
               <div className="rounded-[2.2rem] bg-white dark:bg-[rgba(20,12,38,0.92)] border border-purple-100/80 dark:border-purple-500/20 shadow-[0_16px_40px_-8px_rgba(124,58,237,0.12),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.7),inset_0_1px_1px_rgba(255,255,255,0.1)] p-7 group hover:-translate-y-1 hover:shadow-[0_22px_48px_-8px_rgba(124,58,237,0.22)] transition-all duration-300 cursor-pointer">
