@@ -101,9 +101,9 @@ const jsonLd = {
     email: "info@zyvionixsolutions.com",
   },
   sameAs: [
-    "https://www.instagram.com/akshith_jeevan/",
-    "https://www.linkedin.com/in/akshith-jeevan-405144213",
-    "https://www.facebook.com/akshith.jeevan",
+    "https://www.instagram.com/zyvionixsolutions?igsi=ZXRwZHk2dmc0OTY0",
+    "https://www.facebook.com/share/196mX2JqPk/",
+    "https://www.linkedin.com/company/zyvionix-solutions-llp/",
   ],
 };
 

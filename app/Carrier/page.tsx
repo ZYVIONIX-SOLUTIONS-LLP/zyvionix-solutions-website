@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -237,40 +238,17 @@ export default function CarrierPage() {
               </div>
             </div>
 
-            {/* RIGHT — Ultra Skeuomorphic Info Card */}
-            <div className="animate-hero-card rounded-[2.8rem] bg-gradient-to-b from-[#ffffff] via-[#faf7ff] to-[#f3ecff] dark:from-[#0a0a0d] dark:via-[#050507] dark:to-[#0a0a0d] border border-[#e5d8ff]/90 dark:border-white/10 shadow-[0_24px_60px_-12px_rgba(124,58,237,0.22),0_6px_16px_rgba(0,0,0,0.03),inset_0_2px_3px_#ffffff,inset_0_-4px_10px_rgba(124,58,237,0.1)] dark:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),inset_0_1.5px_2px_rgba(255,255,255,0.15)] p-7 sm:p-9 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[2rem] bg-gradient-to-b from-[#f3edff] to-[#e6d8fd] dark:from-[#14141c] dark:to-[#08080c] border border-[#d4c0ff]/90 dark:border-white/10 p-6 shadow-[inset_0_2.5px_4px_rgba(124,58,237,0.18),0_1.5px_2px_#ffffff,0_4px_12px_rgba(124,58,237,0.08)] dark:shadow-[inset_0_2.5px_5px_rgba(0,0,0,0.6),0_1px_1.5px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.02]">
-                  <p className="text-xs uppercase tracking-[0.3em] font-extrabold text-[#7c3aed] dark:text-purple-300 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">Team Style</p>
-                  <p className="mt-3 text-xl font-extrabold text-[#0f172a] dark:text-white leading-snug">Small team,<br />high ownership</p>
-                </div>
-                <div className="rounded-[2rem] bg-gradient-to-b from-[#f3edff] to-[#e6d8fd] dark:from-[#14141c] dark:to-[#08080c] border border-[#d4c0ff]/90 dark:border-white/10 p-6 shadow-[inset_0_2.5px_4px_rgba(124,58,237,0.18),0_1.5px_2px_#ffffff,0_4px_12px_rgba(124,58,237,0.08)] dark:shadow-[inset_0_2.5px_5px_rgba(0,0,0,0.6),0_1px_1.5px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.02]">
-                  <p className="text-xs uppercase tracking-[0.3em] font-extrabold text-[#7c3aed] dark:text-purple-300 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">Work Model</p>
-                  <p className="mt-3 text-xl font-extrabold text-[#0f172a] dark:text-white leading-snug">Flexible<br />and focused</p>
-                </div>
-              </div>
-
-              <div className="mt-6 rounded-[2.2rem] border border-[#e3d5ff]/90 dark:border-white/10 bg-gradient-to-b from-[#faf7ff] to-[#f1e6ff] dark:from-[#111116] dark:to-[#08080c] p-6 sm:p-7 shadow-[inset_0_2px_5px_rgba(124,58,237,0.14),0_1.5px_2px_#ffffff] dark:shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)]">
-                <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-[#7c3aed] dark:text-purple-400 mb-6">Who thrives here</p>
-                <div className="space-y-6">
-                  {values.slice(0, 3).map((item) => {
-                    const Icon = item.icon;
-                    return (
-                      <div key={item.title} className="flex gap-4 items-start group/item">
-                        <div className="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-[1.25rem] bg-gradient-to-b from-[#ffffff] via-[#f3edff] to-[#e3d3ff] dark:from-[#0f0f14] dark:via-[#08080c] dark:to-[#030305] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff] dark:border-white/10 shadow-[0_6px_16px_-2px_rgba(124,58,237,0.28),inset_0_2px_2.5px_#ffffff,inset_0_-2.5px_5px_rgba(124,58,237,0.2)] dark:shadow-[0_6px_16px_-2px_rgba(0,0,0,0.8),inset_0_1.5px_2px_rgba(255,255,255,0.1)] transition-all duration-300 group-hover/item:scale-105">
-                          <Icon className="h-5 w-5 relative z-10 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
-                        </div>
-                        <div className="pt-0.5">
-                          <p className="font-extrabold text-[#0f172a] dark:text-white text-base group-hover/item:text-[#7c3aed] transition-colors">{item.title}</p>
-                          <p className="mt-1 text-xs leading-relaxed text-[#64748b] dark:text-gray-300 font-normal">{item.description}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+            {/* RIGHT — Raw Image */}
+            <div className="relative w-full flex items-center justify-center lg:justify-end scale-110 sm:scale-120 lg:scale-130 transition-transform duration-500">
+              <Image
+                src="/images/carrier-section/ChatGPT Image Sep 1, 2026, 12_14_34 PM.png"
+                alt="Zyvionix Careers Showcase"
+                width={1200}
+                height={900}
+                className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl h-auto object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
-
           </div>
         </div>
       </section>

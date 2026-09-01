@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -165,17 +166,16 @@ export default function WhoWeArePage() {
         <div className="absolute left-8 top-32 h-80 w-80 rounded-full dark:bg-purple-600/[0.28] blur-[140px] pointer-events-none" />
         <div className="absolute right-8 top-24 h-72 w-72 rounded-full dark:bg-indigo-500/[0.20] blur-[120px] pointer-events-none" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
-          <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-start z-10 relative">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 lg:py-24">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center z-10 relative">
             <div className="animate-hero-slide-left">
               <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
                 <span className="h-2 w-2 rounded-full bg-[#7c3aed] dark:bg-purple-300 shadow-[0_0_8px_rgba(124,58,237,0.8)] animate-pulse" />
                 <span>Who We Are</span>
               </div>
 
-              <h1 className="animate-hero-title relative mt-8 max-w-4xl text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl pb-2 text-[#0f172a] dark:text-white drop-shadow-sm">
+              <h1 className="animate-hero-title relative mt-4 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl pb-2 text-[#0f172a] dark:text-white drop-shadow-sm">
                 At Zyvionix Solutions, we believe innovation begins with the right foundation.
-
               </h1>
               <p className="animate-hero-body mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
                 Established with a vision to empower businesses of every scale,
@@ -195,40 +195,15 @@ export default function WhoWeArePage() {
               </div>
             </div>
 
-            <div className="animate-hero-card rounded-[2.8rem] bg-gradient-to-b from-[#ffffff] via-[#faf7ff] to-[#f3ecff] dark:from-[#0a0a0d] dark:via-[#050507] dark:to-[#0a0a0d] border border-[#e5d8ff]/90 dark:border-white/10 shadow-[0_24px_60px_-12px_rgba(124,58,237,0.22),0_6px_16px_rgba(0,0,0,0.03),inset_0_2px_3px_#ffffff,inset_0_-4px_10px_rgba(124,58,237,0.1)] dark:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),inset_0_1.5px_2px_rgba(255,255,255,0.15)] p-7 sm:p-9 relative overflow-hidden transition-all duration-500 hover:-translate-y-1">
-              <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 relative">
-                {highlights.map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-[2rem] bg-gradient-to-b from-[#f3edff] to-[#e6d8fd] dark:from-[#14141c] dark:to-[#08080c] border border-[#d4c0ff]/90 dark:border-white/10 p-6 shadow-[inset_0_2.5px_4px_rgba(124,58,237,0.18),0_1.5px_2px_#ffffff,0_4px_12px_rgba(124,58,237,0.08)] dark:shadow-[inset_0_2.5px_5px_rgba(0,0,0,0.6),0_1px_1.5px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.02]"
-                  >
-                    <p className="text-3xl font-black sm:text-4xl text-[#0f172a] dark:text-white drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
-                      {item.value}
-                    </p>
-                    <p className="mt-2 text-xs leading-relaxed text-[#64748b] dark:text-gray-300 font-extrabold">
-                      {item.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 rounded-[2.2rem] border border-[#e3d5ff]/90 dark:border-white/10 bg-gradient-to-b from-[#faf7ff] to-[#f1e6ff] dark:from-[#111116] dark:to-[#08080c] p-6 sm:p-7 shadow-[inset_0_2px_5px_rgba(124,58,237,0.14),0_1.5px_2px_#ffffff] dark:shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)]">
-                <div className="flex items-start gap-4">
-                  <div className="relative inline-flex h-13 w-13 shrink-0 items-center justify-center rounded-[1.35rem] bg-gradient-to-b from-[#ffffff] via-[#f3edff] to-[#e3d3ff] dark:from-[#0f0f14] dark:via-[#08080c] dark:to-[#030305] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff] dark:border-white/10 shadow-[0_6px_16px_-2px_rgba(124,58,237,0.28),inset_0_2px_2.5px_#ffffff,inset_0_-2.5px_5px_rgba(124,58,237,0.2)] dark:shadow-[0_6px_16px_-2px_rgba(0,0,0,0.8),inset_0_1.5px_2px_rgba(255,255,255,0.1)]">
-                    <Lightbulb className="h-5 w-5 relative z-10 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
-                  </div>
-                  <div className="pt-0.5">
-                    <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-[#7c3aed] dark:text-purple-400">
-                      OUR STORY
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-[#64748b] dark:text-gray-300 font-normal">
-                      From creative designing, website and app development,
-                      technology consulting, to product innovation, we help
-                      businesses transform ideas into impactful realities.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative w-full flex items-center justify-center lg:justify-end scale-110 lg:scale-125 transition-transform duration-500">
+              <Image
+                src="/images/about-section/ChatGPT Image Sep 1, 2026, 11_28_58 AM.png"
+                alt="Zyvionix Solutions Team & Vision"
+                width={1200}
+                height={900}
+                className="w-full max-w-2xl lg:max-w-none h-auto object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>

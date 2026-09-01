@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   Mail,
@@ -26,39 +27,56 @@ export default function ContactUsPage() {
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-400/10 dark:bg-indigo-600/5 blur-[100px] rounded-full" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
-            <MessageSquare className="h-4 w-4 text-[#7c3aed] dark:text-purple-300 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
-            <span>Contact Us</span>
-          </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
+            {/* Left Content */}
+            <div className="text-left">
+              <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
+                <MessageSquare className="h-4 w-4 text-[#7c3aed] dark:text-purple-300 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
+                <span>Contact Us</span>
+              </div>
 
-          <h1 className="animate-hero-title text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl tracking-tight mb-6">
-            <span className="text-[#0f172a] dark:text-white">
-              Let's Build Something
-            </span>
-            <br />
-            <span className="text-[#7c3aed] dark:text-purple-400 font-extrabold">
-              Amazing Together
-            </span>
-          </h1>
+              <h1 className="animate-hero-title text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl tracking-tight mb-6">
+                <span className="text-[#0f172a] dark:text-white">
+                  Let's Build Something
+                </span>
+                <br />
+                <span className="text-[#7c3aed] dark:text-purple-400 font-extrabold">
+                  Amazing Together
+                </span>
+              </h1>
 
-          <p className="animate-hero-body mx-auto max-w-2xl text-lg leading-8 text-purple-900/70 dark:text-gray-400">
-            Ready to transform your business with innovative digital solutions? We&apos;re here to help you navigate your digital journey.
-          </p>
+              <p className="animate-hero-body max-w-xl text-lg leading-8 text-purple-900/70 dark:text-gray-400">
+                Ready to transform your business with innovative digital solutions? We&apos;re here to help you navigate your digital journey.
+              </p>
 
-          {/* Stats Bar */}
-          <div className="animate-hero-cta mt-12 flex flex-wrap justify-center gap-4 sm:gap-8">
-            <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-6 py-3 backdrop-blur-md shadow-sm dark:shadow-none">
-              <Zap className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-semibold text-purple-950 dark:text-white">24hr Response Time</span>
+              {/* Stats Bar */}
+              <div className="animate-hero-cta mt-8 flex flex-wrap gap-3">
+                <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-4 py-2.5 backdrop-blur-md shadow-sm dark:shadow-none">
+                  <Zap className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                  <span className="text-xs font-semibold text-purple-950 dark:text-white">24hr Response</span>
+                </div>
+                <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-4 py-2.5 backdrop-blur-md shadow-sm dark:shadow-none">
+                  <CheckCircle2 className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                  <span className="text-xs font-semibold text-purple-950 dark:text-white">25+ Projects</span>
+                </div>
+                <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-4 py-2.5 backdrop-blur-md shadow-sm dark:shadow-none">
+                  <Star className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                  <span className="text-xs font-semibold text-purple-950 dark:text-white">5★ Rated</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-6 py-3 backdrop-blur-md shadow-sm dark:shadow-none">
-              <CheckCircle2 className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-semibold text-purple-950 dark:text-white">25+ Projects Delivered</span>
-            </div>
-            <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-6 py-3 backdrop-blur-md shadow-sm dark:shadow-none">
-              <Star className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-semibold text-purple-950 dark:text-white">5★ Client Satisfaction</span>
+
+            {/* Right Raw Image */}
+            <div className="relative w-full flex items-center justify-center lg:justify-end lg:translate-x-12 xl:translate-x-16">
+              <Image
+                src="/images/contactus-section/ChatGPT Image Sep 1, 2026, 12_39_31 PM.png"
+                alt="Zyvionix Contact Us Showcase"
+                width={500}
+                height={380}
+                className="w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
+                priority
+              />
             </div>
           </div>
         </div>

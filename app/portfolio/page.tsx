@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -127,25 +128,42 @@ export default function PortfolioPage() {
     <main className="bg-background text-foreground min-h-screen transition-colors duration-300">
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden pt-36 pb-20 text-center">
+      <section className="relative overflow-hidden pt-36 pb-20">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-purple-400/20 dark:bg-purple-700/10 blur-[100px] rounded-full" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
-            <span className="h-2 w-2 rounded-full bg-[#7c3aed] dark:bg-purple-300 shadow-[0_0_8px_rgba(124,58,237,0.8)] animate-pulse" />
-            <span>Our Work</span>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
+            {/* Left Content */}
+            <div className="text-left">
+              <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
+                <span className="h-2 w-2 rounded-full bg-[#7c3aed] dark:bg-purple-300 shadow-[0_0_8px_rgba(124,58,237,0.8)] animate-pulse" />
+                <span>Our Work</span>
+              </div>
+              <h1 className="animate-hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-[#0f172a] dark:text-white">
+                Projects That <br />
+                <span className="text-[#7c3aed] dark:text-purple-400 font-extrabold">Define Excellence</span>
+              </h1>
+              <div className="animate-hero-divider w-24 h-px mb-6 bg-gradient-to-r from-purple-500 to-transparent" />
+              <p className="animate-hero-body text-muted-foreground dark:text-gray-400 text-lg leading-relaxed max-w-xl">
+                A curated selection of digital products we&apos;ve built — from AI platforms to
+                global commerce experiences. Each project, a story of ambition turned into reality.
+              </p>
+            </div>
+
+            {/* Right Raw Image */}
+            <div className="relative w-full flex items-center justify-center lg:justify-end lg:translate-x-16 xl:translate-x-24">
+              <Image
+                src="/images/portfolio-section/ChatGPT Image Sep 1, 2026, 11_56_05 AM.png"
+                alt="Zyvionix Portfolio Showcase"
+                width={500}
+                height={380}
+                className="w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
+                priority
+              />
+            </div>
           </div>
-          <h1 className="animate-hero-title text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-8 text-[#0f172a] dark:text-white">
-            Projects That <br />
-            <span className="text-[#7c3aed] dark:text-purple-400 font-extrabold">Define Excellence</span>
-          </h1>
-          <div className="animate-hero-divider w-24 h-px mx-auto mb-8 bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
-          <p className="animate-hero-body text-muted-foreground dark:text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-            A curated selection of digital products we&apos;ve built — from AI platforms to
-            global commerce experiences. Each project, a story of ambition turned into reality.
-          </p>
         </div>
       </section>
 

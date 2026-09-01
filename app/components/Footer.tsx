@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
 import { MapPin, Mail, Phone, Clock, ChevronRight } from 'lucide-react';
 
 export default function Footer() {
@@ -35,16 +34,13 @@ export default function Footer() {
             Registered LLP Company
           </p>
           <div className="flex gap-5">
-            <a href="https://www.instagram.com/akshith_jeevan/" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+            <a href="https://www.instagram.com/zyvionixsolutions?igsi=ZXRwZHk2dmc0OTY0" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
               <FaInstagram size={18} />
             </a>
-            <a href="https://x.com/home" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
-              <FaXTwitter size={18} />
-            </a>
-            <a href="https://www.facebook.com/akshith.jeevan" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+            <a href="https://www.facebook.com/share/196mX2JqPk/" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
               <FaFacebookF size={18} />
             </a>
-            <a href="https://www.linkedin.com/in/akshith-jeevan-405144213" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+            <a href="https://www.linkedin.com/company/zyvionix-solutions-llp/" target="_blank" rel="noopener noreferrer" className="skeu-pill p-2 rounded-full text-muted-foreground dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
               <FaLinkedinIn size={18} />
             </a>
           </div>
