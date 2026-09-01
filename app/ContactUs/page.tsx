@@ -74,7 +74,7 @@ export default function ContactUsPage() {
                 alt="Zyvionix Contact Us Showcase"
                 width={500}
                 height={380}
-                className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
+                className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto object-contain mx-auto lg:mx-0 drop-shadow-xl"
                 priority
               />
             </div>
