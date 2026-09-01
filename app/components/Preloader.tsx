@@ -45,7 +45,7 @@ export default function Preloader() {
       <div className="flex flex-col items-center gap-6">
         {/* Company Name */}
         <span className={`text-xl md:text-xl font-bold tracking-normal uppercase bg-gradient-to-r from-foreground/80 to-foreground bg-clip-text text-transparent drop-shadow-lg ${syne.className}`}>
-          zyvionix lab
+          zyvionix solutions
         </span>
         
         {/* Simple minimal progress bar */}
