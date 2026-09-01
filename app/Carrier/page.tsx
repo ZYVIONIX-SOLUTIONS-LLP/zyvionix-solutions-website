@@ -239,13 +239,13 @@ export default function CarrierPage() {
             </div>
 
             {/* RIGHT — Raw Image */}
-            <div className="relative w-full flex items-center justify-center lg:justify-end scale-110 sm:scale-120 lg:scale-130 transition-transform duration-500">
+            <div className="relative w-full flex items-center justify-center lg:justify-end scale-100 sm:scale-105 lg:scale-130 transition-transform duration-500 overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/carrier-section/ChatGPT Image Sep 1, 2026, 12_14_34 PM.png"
                 alt="Zyvionix Careers Showcase"
                 width={1200}
                 height={900}
-                className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl h-auto object-contain drop-shadow-2xl"
+                className="w-full max-w-md sm:max-w-xl lg:max-w-2xl h-auto object-contain drop-shadow-2xl"
                 priority
               />
             </div>

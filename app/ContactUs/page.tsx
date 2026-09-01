@@ -68,13 +68,13 @@ export default function ContactUsPage() {
             </div>
 
             {/* Right Raw Image */}
-            <div className="relative w-full flex items-center justify-center lg:justify-end lg:translate-x-12 xl:translate-x-16">
+            <div className="relative w-full flex items-center justify-center lg:justify-end translate-x-0 lg:translate-x-12 xl:translate-x-16 overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/contactus-section/ChatGPT Image Sep 1, 2026, 12_39_31 PM.png"
                 alt="Zyvionix Contact Us Showcase"
                 width={500}
                 height={380}
-                className="w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
+                className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
                 priority
               />
             </div>

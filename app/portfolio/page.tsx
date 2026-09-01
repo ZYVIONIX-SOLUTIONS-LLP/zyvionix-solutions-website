@@ -153,13 +153,13 @@ export default function PortfolioPage() {
             </div>
 
             {/* Right Raw Image */}
-            <div className="relative w-full flex items-center justify-center lg:justify-end lg:translate-x-16 xl:translate-x-24">
+            <div className="relative w-full flex items-center justify-center lg:justify-end translate-x-0 lg:translate-x-16 xl:translate-x-24 overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/portfolio-section/ChatGPT Image Sep 1, 2026, 11_56_05 AM.png"
                 alt="Zyvionix Portfolio Showcase"
                 width={500}
                 height={380}
-                className="w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
+                className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-xl"
                 priority
               />
             </div>
