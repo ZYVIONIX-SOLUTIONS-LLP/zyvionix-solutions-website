@@ -195,13 +195,13 @@ export default function WhoWeArePage() {
               </div>
             </div>
 
-            <div className="relative w-full flex items-center justify-center lg:justify-end lg:scale-125 transition-transform duration-500 overflow-hidden lg:overflow-visible">
+            <div className="relative w-full flex justify-center lg:justify-end lg:scale-125 transition-transform duration-500 overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/about-section/ChatGPT Image Sep 1, 2026, 11_28_58 AM.png"
                 alt="Zyvionix Solutions Team & Vision"
                 width={1200}
                 height={900}
-                className="w-full max-w-sm sm:max-w-md lg:max-w-none h-auto object-contain mx-auto lg:mx-0 drop-shadow-2xl"
+                className="w-full max-w-sm sm:max-w-md lg:max-w-none h-auto object-contain drop-shadow-2xl"
                 priority
               />
             </div>
