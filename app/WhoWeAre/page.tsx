@@ -195,7 +195,7 @@ export default function WhoWeArePage() {
               </div>
             </div>
 
-            <div className="relative w-full flex justify-center lg:justify-end lg:scale-125 transition-transform duration-500 overflow-hidden lg:overflow-visible">
+            <div className="relative w-full flex justify-start sm:justify-center lg:justify-end -translate-x-3 sm:translate-x-0 lg:scale-125 transition-transform duration-500 overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/about-section/ChatGPT Image Sep 1, 2026, 11_28_58 AM.png"
                 alt="Zyvionix Solutions Team & Vision"
