@@ -30,7 +30,7 @@ export default function ContactUsPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
             {/* Left Content */}
-            <div className="text-left">
+            <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
                 <MessageSquare className="h-4 w-4 text-[#7c3aed] dark:text-purple-300 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
                 <span>Contact Us</span>
@@ -51,7 +51,7 @@ export default function ContactUsPage() {
               </p>
 
               {/* Stats Bar */}
-              <div className="animate-hero-cta mt-8 flex flex-wrap gap-3">
+              <div className="animate-hero-cta mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
                 <div className="flex items-center gap-2 rounded-2xl border border-violet-300/60 dark:border-white/[0.08] bg-white/70 dark:bg-black px-4 py-2.5 backdrop-blur-md shadow-sm dark:shadow-none">
                   <Zap className="h-4 w-4 text-purple-600 dark:text-purple-400" />
                   <span className="text-xs font-semibold text-purple-950 dark:text-white">24hr Response</span>

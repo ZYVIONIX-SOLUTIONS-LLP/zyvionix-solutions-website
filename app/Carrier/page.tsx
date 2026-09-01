@@ -198,7 +198,7 @@ export default function CarrierPage() {
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
 
             {/* LEFT — Headline */}
-            <div className="animate-hero-slide-left">
+            <div className="animate-hero-slide-left text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[#14141c] dark:to-[#08080c] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-white/10 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
                 <BriefcaseBusiness className="h-4 w-4 text-[#7c3aed] dark:text-purple-300 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
                 <span>Career Opportunities</span>
@@ -221,7 +221,7 @@ export default function CarrierPage() {
                 who want to create meaningful work for ambitious brands and growing businesses.
               </p>
 
-              <div className="animate-hero-cta mt-8 flex flex-wrap gap-4">
+              <div className="animate-hero-cta mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
                 <Link
                   href="mailto:info@zyvionixsolutions.com?subject=Career%20Application"
                   className="inline-flex items-center gap-2.5 rounded-[1.25rem] bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600 px-7 py-3.5 text-sm font-extrabold text-white shadow-[0_6px_16px_rgba(124,58,237,0.35),inset_0_1.5px_2px_rgba(255,255,255,0.4),inset_0_-2.5px_5px_rgba(0,0,0,0.25)] border border-purple-400/40 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_24px_rgba(124,58,237,0.45)]"

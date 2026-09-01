@@ -168,7 +168,7 @@ export default function WhoWeArePage() {
 
         <div className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center z-10 relative">
-            <div className="animate-hero-slide-left">
+            <div className="animate-hero-slide-left text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
                 <span className="h-2 w-2 rounded-full bg-[#7c3aed] dark:bg-purple-300 shadow-[0_0_8px_rgba(124,58,237,0.8)] animate-pulse" />
                 <span>Who We Are</span>
@@ -183,7 +183,7 @@ export default function WhoWeArePage() {
                 that bridge creativity, innovation, and strategy.
               </p>
 
-              <div className="animate-hero-cta mt-8 flex flex-wrap gap-3">
+              <div className="animate-hero-cta mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
                 {values.map((value) => (
                   <span
                     key={value}

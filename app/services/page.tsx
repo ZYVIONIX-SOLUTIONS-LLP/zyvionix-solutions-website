@@ -103,7 +103,7 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
             {/* Left Content */}
-            <div className="text-left">
+            <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-md bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22),inset_0_1.5px_2px_rgba(255,255,255,1),inset_0_-2px_4px_rgba(124,58,237,0.15)] dark:shadow-[0_6px_14px_-2px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.5)] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
                 <span className="h-2 w-2 rounded-full bg-[#7c3aed] dark:bg-purple-300 shadow-[0_0_8px_rgba(124,58,237,0.8)] animate-pulse" />
                 <span>What We Offer</span>
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                 Digital Solutions Built for the <br />
                 <span className="text-[#7c3aed] dark:text-purple-400 font-extrabold">Modern World</span>
               </h1>
-              <div className="animate-hero-divider w-24 h-px mb-6 bg-gradient-to-r from-purple-500 to-transparent" />
+              <div className="animate-hero-divider w-24 h-px mb-6 bg-gradient-to-r from-transparent via-purple-500 to-transparent lg:bg-gradient-to-r lg:from-purple-500 lg:to-transparent" />
               <p className="animate-hero-body text-muted-foreground dark:text-gray-400 text-lg leading-relaxed max-w-xl">
                 At Zyvionix Solutions, we craft technology-powered solutions that help businesses,
                 startups, and entrepreneurs grow, scale, and thrive in today&apos;s
