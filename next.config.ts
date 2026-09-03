@@ -1,19 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static export for cPanel/public_html hosting
+  output: "export",
+
   // Core performance flags
   reactStrictMode: true,
 
-
-  // Gzip compression (built‑in)
-  compress: true,
-
-  // Remove X‑Powered‑By header (security)
+  // Remove X-Powered-By header
   poweredByHeader: false,
 
-  // Image optimization
+  // Required for static export when using next/image
   images: {
-    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -28,21 +27,8 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-XSS-Protection", value: "1; mode=block" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-        ],
-      },
-    ];
-  },
+  // Optional: makes routes like /services/ generate /services/index.html
+  trailingSlash: true,
 };
 
 export default nextConfig;
