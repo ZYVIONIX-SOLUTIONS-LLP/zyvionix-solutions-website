@@ -89,6 +89,13 @@ const PROJECTS = [
     image: "/images/portfolio-section/Shoes App.jpg",
     link: "#",
   },
+  {
+    id: 18,
+    title: "Mobile Billing POS Software",
+    category: "SaaS",
+    image: "/images/portfolio-section/mobile billing pos.jpg",
+    link: "#",
+  },
 
   {
     id: 8,
