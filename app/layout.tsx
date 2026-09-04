@@ -26,53 +26,62 @@ const siteUrl = "https://zyvionix.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Zyvionix Solutions — Premium IT Solutions from Kerala",
+    default: "Zyvionix Solutions — Premium IT Solutions & Software Engineering",
     template: "%s | Zyvionix Solutions",
   },
   description:
-    "Zyvionix Solutions builds high-performance web apps, mobile apps, AI chatbots, SaaS platforms, and e-commerce solutions. Based in Kerala, India — delivering world-class digital products.",
+    "Zyvionix Solutions builds high-performance web apps, mobile apps, AI chatbots, SaaS platforms, and enterprise software. Based in Kerala, India — engineering world-class digital products.",
   keywords: [
     "IT company Kerala",
     "web development Kerala",
     "app development India",
     "AI chatbot development",
     "SaaS development",
-    "UI UX design",
+    "UI UX design agency",
     "e-commerce development",
-    "Next.js development",
+    "Next.js development company",
     "Zyvionix Solutions",
-    "digital solutions Kerala",
+    "software engineering Kerala",
+    "digital transformation agency",
   ],
   authors: [{ name: "Zyvionix Solutions", url: siteUrl }],
   creator: "Zyvionix Solutions",
+  publisher: "Zyvionix Solutions",
+  category: "Technology & Software Development",
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: siteUrl,
     siteName: "Zyvionix Solutions",
-    title: "Zyvionix Solutions — Premium IT Solutions from Kerala",
+    title: "Zyvionix Solutions — Premium IT Solutions & Software Engineering",
     description:
-      "We engineer AI-powered solutions, scalable platforms, and digital products. From Kerala to the world.",
+      "We engineer AI-powered solutions, scalable SaaS platforms, mobile applications, and high-performance digital products from Kerala to the world.",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Zyvionix Solutions — Premium IT Solutions",
+        url: "/favicon.ico",
+        width: 512,
+        height: 512,
+        alt: "Zyvionix Solutions Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zyvionix Solutions — Premium IT Solutions from Kerala",
+    title: "Zyvionix Solutions — Premium IT Solutions & Software Engineering",
     description:
-      "We engineer AI-powered solutions, scalable platforms, and digital products.",
-    images: ["/og-image.png"],
+      "We engineer AI-powered solutions, scalable SaaS platforms, and modern digital experiences.",
+    images: ["/favicon.ico"],
   },
   alternates: {
     canonical: siteUrl,
@@ -81,29 +90,49 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ITCompany",
-  name: "Zyvionix Solutions",
-  url: siteUrl,
-  logo: `${siteUrl}/favicon.ico`,
-  description:
-    "Zyvionix Solutions builds high-performance web apps, mobile apps, AI chatbots, and digital products from Kerala, India.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Room No. 60/44, 3rd Floor, JC Chambers, Panampilly Nagar",
-    addressLocality: "Ernakulam",
-    addressRegion: "Kerala",
-    addressCountry: "IN",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+91-6238392582",
-    contactType: "customer service",
-    email: "info@zyvionixsolutions.com",
-  },
-  sameAs: [
-    "https://www.instagram.com/zyvionixsolutions?igsi=ZXRwZHk2dmc0OTY0",
-    "https://www.facebook.com/share/196mX2JqPk/",
-    "https://www.linkedin.com/company/zyvionix-solutions-llp/",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": `${siteUrl}/#organization`,
+      name: "Zyvionix Solutions",
+      url: siteUrl,
+      logo: `${siteUrl}/favicon.ico`,
+      image: `${siteUrl}/favicon.ico`,
+      description:
+        "Zyvionix Solutions builds high-performance web apps, mobile apps, AI chatbots, and custom software solutions.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Room No. 60/44, 3rd Floor, JC Chambers, Panampilly Nagar",
+        addressLocality: "Ernakulam",
+        addressRegion: "Kerala",
+        postalCode: "682036",
+        addressCountry: "IN",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91-6238392582",
+        contactType: "customer service",
+        email: "info@zyvionixsolutions.com",
+        availableLanguage: ["English", "Malayalam"],
+      },
+      sameAs: [
+        "https://www.instagram.com/zyvionixsolutions?igsi=ZXRwZHk2dmc0OTY0",
+        "https://www.facebook.com/share/196mX2JqPk/",
+        "https://www.linkedin.com/company/zyvionix-solutions-llp/",
+      ],
+      priceRange: "$$",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Zyvionix Solutions",
+      description: "Premium IT Solutions and Software Engineering Agency",
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+      inLanguage: "en-US",
+    },
   ],
 };
 
