@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
 
   // Optional: makes routes like /services/ generate /services/index.html
   trailingSlash: true,
+
+  // Compiler options for production optimization
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
+  },
 };
 
 export default nextConfig;
