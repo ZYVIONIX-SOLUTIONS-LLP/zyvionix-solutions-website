@@ -7,23 +7,11 @@ import Footer from "../components/Footer";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 
-const CATEGORIES = ["All", "Web", "App", "AI", "Commerce", "SaaS", "Design", "Marketing", "Branding", "IoT"];
+const CATEGORIES = ["All", "Web", "App", "AI", "Commerce", "SaaS", "Design", "Marketing", "Branding"];
 
 const PROJECTS = [
-  {
-    id: 1,
-    title: "Enterprise SaaS Dashboard",
-    category: "SaaS",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Fitness Tracker Mobile App",
-    category: "App",
-    image: "https://images.unsplash.com/photo-1510017803434-a899398421b3?q=80&w=2000&auto=format&fit=crop",
-    link: "#",
-  },
+
+
   {
     id: 3,
     title: "Modern E-Commerce Engine",
@@ -88,12 +76,20 @@ const PROJECTS = [
     link: "https://car-wash2.vercel.app/",
   },
   {
-    id: 7,
-    title: "Smart Home IoT Hub",
-    category: "IoT",
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2000&auto=format&fit=crop",
+    id: 16,
+    title: "Auto Undo Mobile App",
+    category: "App",
+    image: "/images/portfolio-section/Auto undo.jpg",
+    link: "https://i.diawi.com/YY9N5s",
+  },
+  {
+    id: 17,
+    title: "Shoes Store Mobile App",
+    category: "App",
+    image: "/images/portfolio-section/Shoes App.jpg",
     link: "#",
   },
+
   {
     id: 8,
     title: "Creative UI/UX Design System",
@@ -108,13 +104,7 @@ const PROJECTS = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
     link: "#",
   },
-  {
-    id: 10,
-    title: "Healthcare Management SaaS",
-    category: "SaaS",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000&auto=format&fit=crop",
-    link: "#",
-  },
+
 ];
 
 export default function PortfolioPage() {
