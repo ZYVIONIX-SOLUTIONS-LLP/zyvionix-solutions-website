@@ -12,20 +12,7 @@ const CATEGORIES = ["All", "Web", "App", "AI", "Commerce", "SaaS", "Design", "Ma
 const PROJECTS = [
 
 
-  {
-    id: 3,
-    title: "Modern E-Commerce Engine",
-    category: "Commerce",
-    image: "https://images.unsplash.com/photo-1491933382434-500287f9b54b?q=80&w=2000&auto=format&fit=crop",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "AI Customer Intelligence",
-    category: "AI",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop",
-    link: "#",
-  },
+
   {
     id: 5,
     title: "Corporate Brand Identity",

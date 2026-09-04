@@ -86,6 +86,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  icons: {
+    icon: "/images/header/Untitled - August 20, 2026 at 17.02.05.png",
+    shortcut: "/images/header/Untitled - August 20, 2026 at 17.02.05.png",
+    apple: "/images/header/Untitled - August 20, 2026 at 17.02.05.png",
+  },
 };
 
 const jsonLd = {
