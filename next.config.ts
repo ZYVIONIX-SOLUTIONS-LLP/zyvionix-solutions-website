@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Static export for cPanel/public_html hosting
-  output: "export",
+
 
   // Core performance flags
   reactStrictMode: true,

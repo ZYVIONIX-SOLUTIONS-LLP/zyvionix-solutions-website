@@ -63,6 +63,10 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2 group">
               <ChevronRight size={14} className="text-purple-600 dark:text-purple-400 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
+              <Link href="/products" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Products & SaaS</Link>
+            </li>
+            <li className="flex items-center gap-2 group">
+              <ChevronRight size={14} className="text-purple-600 dark:text-purple-400 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
               <Link href="/portfolio" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</Link>
             </li>
             <li className="flex items-center gap-2 group">

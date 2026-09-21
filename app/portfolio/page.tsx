@@ -81,7 +81,7 @@ const PROJECTS = [
     title: "Mobile Billing POS Software",
     category: "SaaS",
     image: "/images/portfolio-section/mobile billing pos.jpg",
-    link: "#",
+    link: "/products",
   },
 
   {

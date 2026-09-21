@@ -14,6 +14,7 @@ import {
   Star
 } from "lucide-react";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 export default function ContactUsPage() {
   return (
@@ -156,6 +157,9 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── INTERACTIVE CONTACT FORM & MAP SECTION ── */}
+      <Contact />
 
       {/* ── GET IN TOUCH INFO ── */}
       <section className="py-24 border-t border-purple-100 dark:border-border">

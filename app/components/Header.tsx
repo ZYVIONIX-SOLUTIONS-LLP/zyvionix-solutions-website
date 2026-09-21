@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ModeToggle } from '@/components/ui/mode-toggle';
-import { Rocket, Home, Users, LayoutGrid, FolderKanban, Briefcase, Menu, X, ArrowRight } from 'lucide-react';
+import { Rocket, Home, Users, LayoutGrid, Package, FolderKanban, Briefcase, Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
@@ -32,6 +32,7 @@ export default function Header() {
     { href: '/', label: 'Home', icon: Home },
     { href: '/WhoWeAre', label: 'Who We Are', icon: Users },
     { href: '/services', label: 'Services', icon: LayoutGrid },
+    { href: '/products', label: 'Products', icon: Package },
     { href: '/portfolio', label: 'Portfolio', icon: FolderKanban },
     { href: '/Carrier', label: 'Carrier', icon: Briefcase },
   ];

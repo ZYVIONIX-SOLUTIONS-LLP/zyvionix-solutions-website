@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.19.0",
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^6.4.1",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
@@ -20,6 +22,7 @@
     "next": "16.2.2",
     "next-themes": "^0.4.6",
     "ogl": "^1.0.11",
+    "pg": "^8.23.0",
     "react": "19.2.4",
     "react-bits": "^1.0.5",
     "react-dom": "19.2.4",
@@ -29,10 +32,12 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
+    "prisma": "6.4.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
