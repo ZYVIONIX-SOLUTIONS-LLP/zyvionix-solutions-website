@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none px-3 md:px-6 pt-2 md:pt-3 pb-2 transition-all duration-300">
-        <div className="skeu-panel pointer-events-auto relative mx-auto flex items-center justify-between gap-3 md:gap-4 rounded-full pl-3.5 md:pl-6 pr-3.5 md:pr-7 py-1.5 md:py-2 max-w-6xl">
+        <div className="pointer-events-auto relative mx-auto flex items-center justify-between gap-3 md:gap-4 rounded-full pl-3.5 md:pl-6 pr-3.5 md:pr-7 py-1.5 md:py-2 max-w-6xl bg-white/85 dark:bg-zinc-950/85 backdrop-blur-xl border border-black/10 dark:border-white/15 shadow-lg shadow-black/5 dark:shadow-purple-950/30">
 
           {/* LOGO */}
           <div className="shrink-0">
@@ -78,10 +78,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-bold transition-all duration-300 ${
+                  className={`relative inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-semibold transition-all duration-200 ${
                     isActive
-                      ? 'skeu-pressed text-[#6d28d9] dark:text-purple-300'
-                      : 'text-[#64748b] dark:text-gray-300 hover:text-[#7c3aed] dark:hover:text-purple-300 hover:bg-white/50 dark:hover:bg-white/5'
+                      ? 'bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-300/50 dark:border-purple-500/30 shadow-sm'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10'
                   }`}
                 >
                   <Icon size={15} />
@@ -95,10 +95,10 @@ export default function Header() {
           <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5">
             <Link
               href="/ContactUs"
-              className="skeu-gem inline-flex items-center gap-1.5 rounded-full px-2.5 sm:px-3 md:px-4 py-1 md:py-1.5 text-[10px] sm:text-[11px] md:text-xs font-extrabold text-white"
+              className="inline-flex items-center gap-1.5 rounded-full px-3 sm:px-3.5 md:px-4 py-1.5 text-[11px] sm:text-xs font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-md shadow-purple-600/25 hover:shadow-purple-600/40 transition-all duration-200 active:scale-95"
             >
-              <Rocket size={12} className="relative z-10 drop-shadow-[0_1px_1px_rgba(45,12,92,0.5)]" />
-              <span className="relative z-10 hidden sm:inline">Contact Us</span>
+              <Rocket size={13} />
+              <span className="hidden sm:inline">Contact Us</span>
             </Link>
             <ModeToggle />
 

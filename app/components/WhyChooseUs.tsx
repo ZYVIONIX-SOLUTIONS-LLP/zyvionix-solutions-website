@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from 'react'
+import Image from 'next/image'
 import {
   MdVerifiedUser,
   MdSpeed,
@@ -108,20 +109,34 @@ function WhyChooseUs() {
                 className="group relative rounded-[2rem] bg-white dark:bg-[#000000] p-px shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-black/5 dark:border-white/10"
               >
                 <div className="relative h-full flex flex-col overflow-hidden rounded-[1.9rem] bg-white dark:bg-[#000000] text-card-foreground dark:text-white p-8 lg:p-10 border border-black/5 dark:border-white/5">
+                  {/* AI Generated Silk Flow Background Layer */}
+                  <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[1.9rem]">
+                    <Image
+                      src="/images/story-card-ai-v2.jpg"
+                      alt="Card Background"
+                      fill
+                      className="object-cover opacity-45 dark:opacity-20 dark:invert dark:hue-rotate-180 transition-transform duration-700 ease-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/65 via-white/30 to-white/75 dark:from-black/80 dark:via-black/60 dark:to-black/85 pointer-events-none" />
+                  </div>
+
                   {/* Subtle hover gradient inside card */}
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-                    <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-purple-500/10 blur-3xl" />
+                    <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-purple-500/15 blur-3xl" />
                   </div>
 
-                  <div className="mb-6 inline-flex items-center justify-start transition-all duration-500 group-hover:scale-110">
-                    <Icon className="h-10 w-10 text-primary dark:text-purple-400 transition-colors duration-500" />
+                  <div className="relative z-10 mb-6 inline-flex items-center justify-start transition-all duration-500 group-hover:scale-110">
+                    <div className="p-3 rounded-2xl bg-purple-100/70 dark:bg-purple-950/40 border border-purple-200/60 dark:border-purple-800/40 text-primary dark:text-purple-400 shadow-sm">
+                      <Icon className="h-7 w-7" />
+                    </div>
                   </div>
 
-                  <h3 className="text-2xl font-semibold text-foreground/90 dark:text-white/90 mb-4 tracking-tight transition-colors duration-500 group-hover:text-primary dark:group-hover:text-white">
+                  <h3 className="relative z-10 text-2xl font-bold text-foreground dark:text-white mb-4 tracking-tight transition-colors duration-500 group-hover:text-primary dark:group-hover:text-purple-300">
                     {benefit.title}
                   </h3>
 
-                  <p className="text-base text-muted-foreground dark:text-white/50 font-light leading-relaxed group-hover:text-foreground dark:group-hover:text-white/70 transition-colors duration-500">
+                  <p className="relative z-10 text-base text-muted-foreground dark:text-gray-300 font-normal leading-relaxed group-hover:text-foreground dark:group-hover:text-white transition-colors duration-500">
                     {benefit.description}
                   </p>
                 </div>

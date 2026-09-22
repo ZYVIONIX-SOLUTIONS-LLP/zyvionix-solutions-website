@@ -18,7 +18,6 @@ import {
   Coffee,
   ShoppingBag,
   ArrowRight,
-  Sparkles,
   ExternalLink,
   ChevronDown,
   ChevronUp,
@@ -175,7 +174,7 @@ export default function ProductsPage() {
           <div className="text-center max-w-3xl mx-auto flex flex-col items-center">
             {/* Badge */}
             <div className="animate-hero-badge relative inline-flex items-center gap-2.5 rounded-full bg-gradient-to-b from-[#f3edff] to-[#e3d3ff] dark:from-[rgba(45,28,80,0.95)] dark:to-[rgba(25,14,48,0.95)] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff]/80 dark:border-purple-500/30 shadow-[0_6px_14px_-2px_rgba(124,58,237,0.22)] px-5 py-2 text-xs font-extrabold uppercase tracking-[0.25em] mb-6">
-              <Sparkles size={14} className="text-purple-600 dark:text-purple-300 animate-pulse" />
+              <Layers size={14} className="text-purple-600 dark:text-purple-300" />
               <span>Zyvionix Software Suite • SaaS</span>
             </div>
 

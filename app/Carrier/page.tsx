@@ -14,7 +14,6 @@ import {
   Layers3,
   MapPin,
   Rocket,
-  Sparkles,
   Users,
 } from "lucide-react";
 import { MdTrendingUp } from "react-icons/md";

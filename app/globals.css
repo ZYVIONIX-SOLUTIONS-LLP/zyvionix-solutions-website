@@ -633,83 +633,52 @@ svg:hover {
     0 -1px 0 rgba(196, 181, 253, 0.15) inset;
 }
 
-/* Glossy gem button — CTA treatment with a curved sheen sweep across the top */
+/* Gem button — CTA treatment */
 .skeu-gem {
   position: relative;
-  background: linear-gradient(180deg, #9d5cf5 0%, #6d28d9 55%, #5b21b6 100%);
-  border: 1px solid rgba(91, 33, 182, 0.6);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.5) inset,
-    0 4px 12px rgba(109, 40, 217, 0.4),
-    0 1px 2px rgba(45, 12, 92, 0.4);
+  background: linear-gradient(180deg, #7c3aed 0%, #6d28d9 100%);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.3);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .skeu-gem::before {
-  content: '';
-  position: absolute;
-  inset: 1px 1px auto 1px;
-  height: 45%;
-  border-radius: 9999px 9999px 60% 60% / 9999px 9999px 100% 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
-  pointer-events: none;
+  display: none !important;
 }
 
 .skeu-gem:hover {
   transform: translateY(-1px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.55) inset,
-    0 8px 20px rgba(109, 40, 217, 0.5);
+  box-shadow: 0 6px 16px rgba(109, 40, 217, 0.4);
 }
 
 .skeu-gem:active {
   transform: translateY(1px) scale(0.98);
-  box-shadow:
-    0 3px 8px rgba(45, 12, 92, 0.6) inset,
-    0 1px 2px rgba(45, 12, 92, 0.3);
 }
 
 .dark .skeu-gem {
-  background: linear-gradient(180deg, #b794f6 0%, #7c3aed 55%, #5b21b6 100%);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.4) inset,
-    0 4px 16px rgba(124, 58, 237, 0.5),
-    0 1px 2px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(180deg, #8b5cf6 0%, #7c3aed 100%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
 }
 
-/* Inset engraved track (mode toggle / switches) */
+/* Track (mode toggle / switches) */
 .skeu-track {
-  background: linear-gradient(180deg, #e3dbef 0%, #f3eefa 60%);
-  box-shadow:
-    0 2px 5px rgba(76, 44, 122, 0.30) inset,
-    0 -1px 0 rgba(255, 255, 255, 0.7) inset,
-    0 1px 0 rgba(255, 255, 255, 0.6);
+  background: #e4ddef;
 }
 
 .dark .skeu-track {
-  background: linear-gradient(180deg, #100b1a 0%, #221a35 60%);
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.8) inset,
-    0 -1px 0 rgba(196, 181, 253, 0.12) inset;
+  background: #18181b;
 }
 
-/* Glossy gem knob (mode toggle thumb) */
+/* Knob (mode toggle thumb) */
 .skeu-knob {
-  position: relative;
-  background: radial-gradient(circle at 32% 28%, #ffffff 0%, #e9defc 35%, #b794f6 75%, #7c3aed 100%);
-  box-shadow:
-    0 2px 4px rgba(45, 12, 92, 0.35),
-    0 1px 1px rgba(255, 255, 255, 0.8) inset,
-    0 -2px 3px rgba(91, 33, 182, 0.35) inset;
+  background: #7c3aed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .dark .skeu-knob {
-  background: radial-gradient(circle at 32% 28%, #f3ecff 0%, #c4b5fd 35%, #7c3aed 75%, #4c1d95 100%);
-  box-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.6),
-    0 1px 1px rgba(255, 255, 255, 0.5) inset,
-    0 -2px 4px rgba(45, 12, 92, 0.5) inset;
+  background: #8b5cf6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Stitched seam divider — leather-trim edge accent */

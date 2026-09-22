@@ -9,8 +9,8 @@ import {
   CheckCircle2,
   AlertCircle,
   Clock,
-  Sparkles,
-  ArrowRight
+  ArrowRight,
+  MessageSquare
 } from "lucide-react";
 
 export default function Contact() {
@@ -82,7 +82,7 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 rounded-full bg-purple-50 dark:bg-purple-950/40 border border-purple-200/80 dark:border-purple-800/40 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.2em] text-[#7c3aed] dark:text-purple-300 shadow-sm mb-4">
-            <Sparkles className="h-3.5 w-3.5 text-[#7c3aed] dark:text-purple-400" />
+            <MessageSquare className="h-3.5 w-3.5 text-[#7c3aed] dark:text-purple-400" />
             <span>Get in Touch</span>
           </div>
 

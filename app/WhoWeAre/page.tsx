@@ -234,18 +234,29 @@ export default function WhoWeArePage() {
             </div>
           </div>
 
-          <div className="rounded-[2.8rem] bg-gradient-to-b from-[#ffffff] via-[#faf7ff] to-[#f3ecff] dark:from-[#0a0a0d] dark:via-[#050507] dark:to-[#0a0a0d] border border-[#e5d8ff]/90 dark:border-white/10 shadow-[0_24px_60px_-12px_rgba(124,58,237,0.22),0_6px_16px_rgba(0,0,0,0.03),inset_0_2px_3px_#ffffff,inset_0_-4px_10px_rgba(124,58,237,0.1)] dark:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),inset_0_1.5px_2px_rgba(255,255,255,0.1)] overflow-hidden transition-all duration-500 divide-y divide-[#e3d5ff]/70 dark:divide-white/10">
+          <div className="relative rounded-[2.8rem] bg-white dark:bg-[#000000] border border-black/5 dark:border-white/10 shadow-2xl overflow-hidden transition-all duration-500 divide-y divide-black/5 dark:divide-white/10">
+            {/* AI Generated Silk Flow Background Layer */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[2.8rem]">
+              <Image
+                src="/images/story-card-ai-v2.jpg"
+                alt="Story Background Pattern"
+                fill
+                className="object-cover opacity-50 dark:opacity-25 dark:invert dark:hue-rotate-180 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white/75 dark:from-black/85 dark:via-black/70 dark:to-black/85 pointer-events-none" />
+            </div>
+
             {storyPoints.map((point) => {
               const Icon = point.icon;
               return (
                 <article
                   key={point.title}
-                  className="relative p-8 transition-all duration-300 group hover:bg-[#faf7ff]/80 dark:hover:bg-[#111116] cursor-pointer"
+                  className="relative p-8 transition-all duration-300 group hover:bg-purple-500/5 dark:hover:bg-white/5 cursor-pointer"
                 >
                   <div className="flex items-start gap-5 relative z-10">
-                    {/* Elevated 3D Gem Socket Badge */}
-                    <div className="relative inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-[1.35rem] bg-gradient-to-b from-[#ffffff] via-[#f3edff] to-[#e3d3ff] dark:from-[#0f0f14] dark:via-[#08080c] dark:to-[#030305] text-[#7c3aed] dark:text-purple-300 border border-[#d8c5ff] dark:border-white/10 shadow-[0_6px_16px_-2px_rgba(124,58,237,0.28),inset_0_2px_2.5px_#ffffff,inset_0_-2.5px_5px_rgba(124,58,237,0.2)] dark:shadow-[0_6px_16px_-2px_rgba(0,0,0,0.8),inset_0_1.5px_2px_rgba(255,255,255,0.1)] transition-all duration-300 group-hover:scale-105">
-                      <Icon className="h-6 w-6 relative z-10 drop-shadow-[0_1px_1px_rgba(124,58,237,0.3)]" />
+                    <div className="relative inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-[1.35rem] bg-purple-100/80 dark:bg-purple-950/40 text-primary dark:text-purple-300 border border-purple-200/60 dark:border-purple-800/40 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-purple-600">
+                      <Icon className="h-6 w-6 relative z-10" />
                     </div>
 
                     <div className="pt-0.5">

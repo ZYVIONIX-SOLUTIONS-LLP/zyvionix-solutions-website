@@ -49,7 +49,7 @@ function applyTheme(attribute: ThemeProviderProps["attribute"], theme: ResolvedT
 export function ThemeProvider({
   children,
   attribute = "class",
-  defaultTheme = "system",
+  defaultTheme = "light",
   enableSystem = true,
   storageKey = "theme",
 }: ThemeProviderProps) {

@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Monitor,
   Smartphone,
@@ -34,6 +35,16 @@ function ServiceCard({ service }: { service: Service }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const Icon = service.icon;
 
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isHovered) {
+        videoRef.current.play().catch(() => {});
+      } else {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    }
+  }, [isHovered]);
 
   return (
     <article
@@ -50,9 +61,32 @@ function ServiceCard({ service }: { service: Service }) {
 
         {/* Media Container */}
         <div className="relative aspect-video overflow-hidden bg-muted/10 dark:bg-black/40">
+          {/* Static thumbnail poster before hover */}
+          {service.poster && (
+            <Image
+              src={service.poster}
+              alt={service.title}
+              fill
+              className={`object-cover transition-all duration-700 ${
+                isHovered && service.lottieSrc ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
+              }`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          )}
+
+          {/* Dynamic Lottie Animation on Hover */}
           {service.lottieSrc ? (
-            <div className="absolute inset-0 h-full w-full transition duration-1000 ease-out group-hover:scale-110 dark:opacity-90 dark:mix-blend-screen">
-              <LottieAnimation src={service.lottieSrc} bgInfo="transparent" />
+            <div
+              className={`absolute inset-0 h-full w-full transition-all duration-700 ease-out group-hover:scale-105 dark:mix-blend-screen ${
+                isHovered ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <LottieAnimation
+                src={service.lottieSrc}
+                bgInfo="transparent"
+                playOnHover={true}
+                isHovered={isHovered}
+              />
             </div>
           ) : service.video ? (
             <video
@@ -61,19 +95,14 @@ function ServiceCard({ service }: { service: Service }) {
               poster={service.poster}
               loop
               muted
-              autoPlay
               playsInline
               className="absolute inset-0 h-full w-full object-cover opacity-60 dark:mix-blend-screen transition duration-1000 ease-out group-hover:scale-110 group-hover:opacity-90"
             />
-          ) : (
-            <div className="absolute inset-0 h-full w-full transition duration-1000 ease-out group-hover:scale-110 opacity-80 dark:mix-blend-screen">
-              <LottieAnimation />
-            </div>
-          )}
+          ) : null}
 
           {/* Glassy Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent dark:from-black dark:via-transparent dark:to-transparent" />
-          <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,0.1),transparent_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent dark:from-black dark:via-transparent dark:to-transparent pointer-events-none" />
+          <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,0.1),transparent_70%)] pointer-events-none" />
         </div>
 
         {/* Content Area */}
@@ -121,8 +150,7 @@ export default function About() {
       title: "Web Development",
       slug: "web-development",
       description: "High-performance, scalable websites and progressive web apps built with the latest technologies.",
-      video: "/videos/abstract-cyan-loop-1.mp4",
-      poster: "/videos/about_cyan_1.png",
+      poster: "/images/web-development-v4.jpg",
       lottieSrc: "https://lottie.host/0720ec64-6eb5-46f2-bd10-ba266a2efa5a/Hehr4ETsVQ.lottie"
     },
     {
@@ -131,8 +159,7 @@ export default function About() {
       title: "App Development",
       slug: "app-development",
       description: "Native and cross-platform mobile applications that deliver premium performance and user experience.",
-      video: "/videos/abstract-cyan-loop-2.mp4",
-      poster: "/videos/about_cyan_2.png",
+      poster: "/images/app-development-v4.jpg",
       lottieSrc: "https://lottie.host/6ddc4d0c-b1f1-425f-a5ae-6240130e05ea/0ZHuI1NHxK.lottie"
     },
     {
@@ -141,8 +168,7 @@ export default function About() {
       title: "E-Commerce",
       slug: "ecommerce-platform",
       description: "Secure and optimized online shopping platforms designed to maximize conversions and sales.",
-      video: "/videos/abstract-cyan-loop-3.mp4",
-      poster: "/videos/about_cyan_3.png",
+      poster: "/images/ecommerce-v2.jpg",
       lottieSrc: "https://lottie.host/26eae896-f94f-4e43-b7ff-d6ad5d9ce4b9/BDNL1RZHds.lottie"
     },
     {
@@ -151,8 +177,7 @@ export default function About() {
       title: "AI & Chatbots",
       slug: "ai-chatbot",
       description: "Intelligent conversational agents and machine learning models that automate business workflows.",
-      video: "/videos/abstract-cyan-loop-4.mp4",
-      poster: "/videos/about_cyan_4.png",
+      poster: "/images/chatbot-platform-v2.png",
       lottieSrc: "https://lottie.host/78c243b8-411f-480b-a19c-910945ff16ea/2p6s3dYyue.lottie"
     },
     {
@@ -161,8 +186,7 @@ export default function About() {
       title: "SaaS Development",
       slug: "saas-development",
       description: "Cloud-native software solutions built for multi-tenancy, security, and high scalability.",
-      video: "/videos/abstract-cyan-loop-1.mp4",
-      poster: "/videos/about_cyan_1.png",
+      poster: "/images/saas-development-v2.png",
       lottieSrc: "https://lottie.host/017797d2-3bae-4a47-899a-4b036e425481/CneBPF9W6t.lottie"
     },
     {
@@ -171,8 +195,7 @@ export default function About() {
       title: "UI/UX Design",
       slug: "ui-ux-design",
       description: "Crafting intuitive digital interfaces that combine stunning aesthetics with seamless usability.",
-      video: "/videos/abstract-cyan-loop-2.mp4",
-      poster: "/videos/about_cyan_2.png",
+      poster: "/images/ui-ux-design-v3.png",
       lottieSrc: "https://lottie.host/0e836a88-726d-4402-8295-226d28f3f9c4/vGeCWuvkQ1.lottie"
     },
     {
@@ -181,8 +204,7 @@ export default function About() {
       title: "Digital Marketing",
       slug: "digital-marketing",
       description: "Data-driven growth strategies and marketing automation to amplify your brand's digital presence.",
-      video: "/videos/abstract-cyan-loop-3.mp4",
-      poster: "/videos/about_cyan_3.png",
+      poster: "/images/digital-marketing-v6.jpg",
       lottieSrc: "https://lottie.host/dd04a975-b7a5-400b-a5fd-5a6b51e0a830/I3gycnioEA.lottie"
     },
     {
@@ -191,8 +213,7 @@ export default function About() {
       title: "Logo & Branding",
       slug: "logo-branding",
       description: "Creating unique visual identities and memorable brand stories that leave a lasting impression.",
-      video: "/videos/abstract-cyan-loop-1.mp4",
-      poster: "/videos/about_cyan_1.png",
+      poster: "/images/logo-branding-v6.png",
       lottieSrc: "https://lottie.host/e978978f-26ea-4f93-904b-6f6933597cd4/SjygM4l49W.lottie"
     },
     {
@@ -201,8 +222,7 @@ export default function About() {
       title: "IoT Solutions",
       slug: "iot-solutions",
       description: "Smart connected systems and embedded software to monitor and control industrial environments.",
-      video: "/videos/abstract-cyan-loop-2.mp4",
-      poster: "/videos/about_cyan_2.png",
+      poster: "/images/iot-solutions-v3.jpg",
       lottieSrc: "https://lottie.host/3740aa27-e3fe-4490-ac5f-9ace3c517963/HLyJLHmv7Y.lottie"
     }
   ]
